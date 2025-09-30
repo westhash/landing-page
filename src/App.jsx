@@ -7,7 +7,7 @@ export default function App() {
         <div className="brand">West<span>#</span></div>
         <p className="tag">web3 technologies</p>
         <a className="contact-btn" href="mailto:team@westhash.io">team@westhash.io</a>
-        <p className="mini">© {new Date().getFullYear()} West#</p>
+        <p className="mini">© {new Date().getFullYear()} West#llc</p>
       </div>
     </div>
   )
