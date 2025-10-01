@@ -93,9 +93,9 @@
 }
 
 .hero-content p {
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 3vw, 1.3rem);
   color: var(--text-dim);
-  max-width: 600px;
+  max-width: 900px;
   margin: 0 auto;
   line-height: 1.6;
 }
@@ -112,21 +112,21 @@
   padding-bottom: 40px; /* Adjust based on footer height */
 }
 
-.center-block { max-width: 600px; }
+.center-block { max-width: 700px; }
 
 .bio-section { margin: 2rem 0; }
-.bio-section h2 { font-size: 1.5rem; margin-bottom: 1rem; color: var(--text); }
-.bio-section p { font-size: 1rem; line-height: 1.6; color: var(--text-dim); }
+.bio-section h2 { font-size: clamp(1.3rem, 5vw, 1.8rem); margin-bottom: 1rem; color: var(--text); }
+.bio-section p { font-size: clamp(1rem, 3vw, 1.3rem); line-height: 1.6; color: var(--text-dim); }
 
 .skills-section { margin: 2rem 0; text-align: left; }
-.skills-section h3 { font-size: 1.2rem; margin-bottom: 1rem; color: var(--text); text-align: center; }
+.skills-section h3 { font-size: clamp(1.1rem, 4vw, 1.5rem); margin-bottom: 1rem; color: var(--text); text-align: center; }
 .skills-section ul { list-style: none; padding: 0; }
-.skills-section li { margin-bottom: 0.5rem; font-size: 0.9rem; color: var(--text-dim); }
+.skills-section li { margin-bottom: 0.5rem; font-size: clamp(0.9rem, 3vw, 1.2rem); color: var(--text-dim); }
 .skills-section strong { color: var(--text); }
 
 .experience-section { margin: 2rem 0; }
-.experience-section h3 { font-size: 1.2rem; margin-bottom: 1rem; color: var(--text); }
-.experience-section p { font-size: 1rem; line-height: 1.6; color: var(--text-dim); }
+.experience-section h3 { font-size: clamp(1.1rem, 4vw, 1.5rem); margin-bottom: 1rem; color: var(--text); }
+.experience-section p { font-size: clamp(1rem, 3vw, 1.3rem); line-height: 1.6; color: var(--text-dim); }
 
 .contact-btn { display:inline-block; padding:.9rem 1.4rem; border-radius:10px; background:var(--brand,#646cff); color:#fff; text-decoration:none; font-weight:500; letter-spacing:.5px; box-shadow:0 4px 18px -6px rgba(100,108,255,.4); transition:.25s; }
 .contact-btn:hover { filter:brightness(1.08); box-shadow:0 6px 24px -8px rgba(100,108,255,.55); }
