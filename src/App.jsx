@@ -29,7 +29,7 @@ export default function App() {
       <main className="main-content">
         <div className="center-block">
           <div className="bio-section">
-            <p>With over 10 years of experience in enterprise environments, WestHash specializes in scalable architectures and modern web development technologies. Experts in Web3 integrations, cloud computing, serverless architecture, and innovative full-stack solutions.</p>
+            <p>With over 15 years of experience in enterprise environments, WestHash specializes in scalable architectures and modern web development technologies. Experts in Web3 integrations, cloud computing, serverless architecture, and innovative full-stack solutions.</p>
           </div>
           
           <div className="skills-section">
@@ -51,10 +51,11 @@ export default function App() {
           </div>
           
           <a className="contact-btn" href="mailto:team@westhash.io">team@westhash.io</a>
-          {/* <div className="social-links">
-            <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">GitHub</a>
-          </div> */}
+          <div className="social-links">
+            {/* <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">LinkedIn</a> */}
+            <a href="https://github.com/westhash" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://app.ens.domains/name/westhash.eth" target="_blank" rel="noopener noreferrer">ENS</a>
+          </div>
         </div>
       </main>
       
