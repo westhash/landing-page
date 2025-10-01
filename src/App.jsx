@@ -29,7 +29,6 @@ export default function App() {
       <main className="main-content">
         <div className="center-block">
           <div className="bio-section">
-            <h2>Solution Architect & Software Engineering Services</h2>
             <p>With over 10 years of experience in enterprise environments, WestHash specializes in scalable architectures and modern web development technologies. Experts in Web3 integrations, cloud computing, serverless architecture, and innovative full-stack solutions.</p>
           </div>
           
