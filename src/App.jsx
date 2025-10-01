@@ -35,13 +35,13 @@ export default function App() {
           <div className="skills-section">
             <h3>Core Competencies</h3>
             <ul>
-              <li><strong>Strategic Solution Architecture:</strong> Identifying optimal architectural patterns for enterprise challenges, selecting between monolithic or distributed systems based on project needs</li>
-              <li><strong>Adaptive Full-Stack Development:</strong> Leveraging modern web technologies for scalable and maintainable solutions</li>
-              <li><strong>Web3 & Blockchain Integration:</strong> Expertise in blockchain ecosystems, including on-chain development leveraging major protocols and standards, selecting appropriate technologies for decentralized applications</li>
-              <li><strong>Cloud & Serverless Solutions:</strong> Proficient in major cloud platforms, deploying serverless architectures to optimize cost and performance</li>
-              <li><strong>DevOps & Automation:</strong> Implementing CI/CD pipelines and containerization strategies, ensuring reliable and efficient deployment across environments</li>
-              <li><strong>Data Management & Analytics:</strong> Designing data strategies with databases, messaging and integrations for efficient data flow and big data processing</li>
-              <li><strong>Infrastructure & Security Services:</strong> Managing domain and infrastructure with services for security, firewall protection, and performance optimization to ensure robust and secure deployments</li>
+              <li><strong>Strategic Solution Architecture:</strong> Designing and selecting optimal architectural patterns, from monolithic to distributed systems, to meet enterprise requirements</li>
+              <li><strong>Adaptive Full-Stack Development:</strong> Building scalable and maintainable solutions with modern web technologies</li>
+              <li><strong>Web3 & Blockchain Integration:</strong> Designing and implementing decentralized applications, leveraging major blockchain protocols and standards</li>
+              <li><strong>Cloud & Serverless Solutions:</strong> Architecting and deploying serverless systems on leading cloud platforms to optimize cost, scalability, and performance</li>
+              <li><strong>DevOps & Automation:</strong> Implementing CI/CD pipelines, containerization, and automation strategies for reliable and efficient delivery</li>
+              <li><strong>Data Management & Analytics:</strong> Engineering robust data strategies with databases, messaging, and integrations for seamless flow and big data processing</li>
+              <li><strong>Infrastructure & Security Services:</strong> Managing domains, infrastructure, and security measures to ensure resilient, protected, and high-performing deployments</li>
             </ul>
           </div>
           
