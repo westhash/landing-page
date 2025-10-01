@@ -37,7 +37,7 @@ export default function App() {
             <ul>
               <li><strong>Strategic Solution Architecture:</strong> Identifying optimal architectural patterns for enterprise challenges, selecting between monolithic or distributed systems based on project needs</li>
               <li><strong>Adaptive Full-Stack Development:</strong> Leveraging modern web technologies for scalable and maintainable solutions</li>
-              <li><strong>Web3 & Blockchain Integration:</strong> Expertise in blockchain ecosystems, including DeFi protocols, smart contract development, and NFT platforms, selecting appropriate technologies for decentralized applications</li>
+              <li><strong>Web3 & Blockchain Integration:</strong> Expertise in blockchain ecosystems, including on-chain development leveraging major protocols and standards, selecting appropriate technologies for decentralized applications</li>
               <li><strong>Cloud & Serverless Solutions:</strong> Proficient in major cloud platforms, deploying serverless architectures to optimize cost and performance</li>
               <li><strong>DevOps & Automation:</strong> Implementing CI/CD pipelines and containerization strategies, ensuring reliable and efficient deployment across environments</li>
               <li><strong>Data Management & Analytics:</strong> Designing data strategies with databases, messaging and integrations for efficient data flow and big data processing</li>
