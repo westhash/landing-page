@@ -1,25 +1,58 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef, useLayoutEffect } from 'react'
 import './App.css'
 
 export default function App() {
-  const [isScrolled, setIsScrolled] = useState(false)
+  const [brandFontSize, setBrandFontSize] = useState('8rem')
+  const [heroPaddingTop, setHeroPaddingTop] = useState(0)
+  const [headerBlur, setHeaderBlur] = useState('10px')
+  const headerRef = useRef(null)
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 150)
+    const updateFontSize = () => {
+      const scrollY = window.scrollY
+      const maxScroll = 150
+      const startSize = Math.min(8, window.innerWidth / 100)
+      const endSize = 1.2
+      const size = Math.max(startSize - (scrollY / maxScroll) * (startSize - endSize), endSize)
+      setBrandFontSize(`${size}rem`)
+
+      const blurValue = Math.max(1, 10 - (scrollY / maxScroll) * 9)
+      setHeaderBlur(`${blurValue}px`)
     }
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
+    updateFontSize() // Initialize on mount
+    window.addEventListener('scroll', updateFontSize)
+    window.addEventListener('resize', updateFontSize)
+    return () => {
+      window.removeEventListener('scroll', updateFontSize)
+      window.removeEventListener('resize', updateFontSize)
+    }
+  }, [])
+
+  useLayoutEffect(() => {
+    const updatePadding = () => {
+      if (headerRef.current) {
+        const height = headerRef.current.offsetHeight
+        const isLandscape = window.innerWidth > window.innerHeight
+        setHeroPaddingTop(height + (isLandscape ? 20 : -20)) 
+      }
+    }
+    updatePadding()
+    window.addEventListener('resize', updatePadding)
+    window.addEventListener('orientationchange', updatePadding)
+    return () => {
+      window.removeEventListener('resize', updatePadding)
+      window.removeEventListener('orientationchange', updatePadding)
+    }
   }, [])
 
   return (
     <div className="app-container">
-      <header className={`header ${isScrolled ? 'header-scrolled' : ''}`}>
-        <div className="brand"><b>West<span><b>#</b></span></b></div>
-        <p className={`tag ${isScrolled ? 'tag-visible' : 'tag-hidden'}`}><>web3 technologies</></p>
+      <header ref={headerRef} className={`header ${window.scrollY > 150 ? 'header-scrolled' : ''}`} style={{ backdropFilter: `blur(${headerBlur})` }}>
+        <div className="brand" style={{ fontSize: brandFontSize }}><b>West<span><b>#</b></span></b></div>
+        <p className={`tag ${window.scrollY > 150 ? 'tag-visible' : 'tag-hidden'}`}><>web3 technologies</></p>
       </header>
       
-      <section className="hero-section">
+      <section className="hero-section" style={{ paddingTop: `${heroPaddingTop}px` }}>
         <div className="hero-content">
           <h1>Enterprise Solutions with Web3 & Cloud Technologies</h1>
           <p>Empowering businesses with scalable, secure, and cutting-edge software engineering services.</p>

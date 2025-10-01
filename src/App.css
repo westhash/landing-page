@@ -14,16 +14,15 @@
   padding: 1rem 2rem 1rem;
   text-align: center;
   background: var(--surface);
-  backdrop-filter: blur(10px);
-  transition: all 0.1s ease;
+  transition: all 0.4s ease;
 }
 
 .header .brand {
-  font-size: clamp(4rem, 10vw, 4rem);
+  font-size: clamp(10rem, 25vw, 10rem);
   font-weight: 600;
   letter-spacing: -1px;
   margin-bottom: 0.5rem;
-  transition: all 0.1s ease;
+  /* transition: all 0.0s ease; */
 }
 
 .header .brand span { color: var(--brand, #646cff); }
@@ -56,7 +55,6 @@
   padding: 0.2rem 2rem 0.5rem;
   background: rgba(var(--bg-rgb), 0.1);
   text-align: left;
-  backdrop-filter: blur(1px);
   /* border-bottom: none; */
   display: flex;
   flex-direction: column;
@@ -78,7 +76,7 @@
 
 /* Hero Section */
 .hero-section {
-  padding: 180px 2rem 4rem;
+  padding: 0 2rem 4rem;
   text-align: center;
   background: var(--hero-bg);
   /* border-bottom: 1px solid var(--border); */
