@@ -4,11 +4,18 @@
   font-weight: 400;
   color-scheme: dark light;
   --brand: #646cff;
+  --brand-rgb: 100, 108, 255;
   --bg: #141414;
+  --bg-rgb: 20, 20, 20;
+  --bg-start: #1d1d1d;
   --text: rgba(255,255,255,0.9);
   --text-dim: #9a9a9a;
+  --surface: rgba(29, 29, 29, 0.9);
+  --surface-strong: rgba(29, 29, 29, 0.95);
+  --hero-bg: linear-gradient(135deg, rgba(var(--brand-rgb), 0.1), rgba(var(--brand-rgb), 0.05));
+  --border: rgba(255, 255, 255, 0.1);
   color: var(--text);
-  background: radial-gradient(circle at 20% 25%, #1d1d1d, var(--bg));
+  background: radial-gradient(circle at 20% 25%, var(--bg-start), var(--bg));
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -51,8 +58,19 @@ h1 { line-height: 1.1; }
 button { font-family: inherit; }
 
 @media (prefers-color-scheme: light) {
-  :root { color: #222; background:#ffffff; }
-  body { background: #ffffff; }
-  a { --link: #3240ff; --link-hover: #1820a8; }
+  :root {
+    --bg: #ffffff;
+    --bg-rgb: 255, 255, 255;
+    --bg-start: #f0f0f0;
+    --text: #222222;
+    --text-dim: #666666;
+    --brand-rgb: 50, 64, 255;
+    --surface: rgba(255, 255, 255, 0.9);
+    --surface-strong: rgba(255, 255, 255, 0.95);
+    --hero-bg: linear-gradient(135deg, rgba(var(--brand-rgb), 0.1), rgba(var(--brand-rgb), 0.05));
+    --border: rgba(0, 0, 0, 0.1);
+  }
+  body { background: var(--bg); }
+  /* a { --link: #3240ff; --link-hover: #1820a8; } */
   a:hover, a:focus-visible { color: var(--link-hover); }
 }
