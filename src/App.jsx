@@ -35,13 +35,13 @@ export default function App() {
           <div className="skills-section">
             <h3>Core Competencies</h3>
             <ul>
-              <li><strong>Strategic Solution Architecture:</strong> Identifying optimal architectural patterns for enterprise challenges, selecting between monolithic, microservices, or distributed systems based on project needs</li>
-              <li><strong>Adaptive Full-Stack Development:</strong> Leveraging modern web technologies like React, Node.js, TypeScript, and GraphQL, with expertise in choosing the right stack for scalable and maintainable solutions</li>
+              <li><strong>Strategic Solution Architecture:</strong> Identifying optimal architectural patterns for enterprise challenges, selecting between monolithic or distributed systems based on project needs</li>
+              <li><strong>Adaptive Full-Stack Development:</strong> Leveraging modern web technologies for scalable and maintainable solutions</li>
               <li><strong>Web3 & Blockchain Integration:</strong> Expertise in blockchain ecosystems, including DeFi protocols, smart contract development, and NFT platforms, selecting appropriate technologies for decentralized applications</li>
-              <li><strong>Cloud & Serverless Solutions:</strong> Proficient in major cloud platforms (AWS, Azure, GCP), deploying serverless architectures with Lambda, API Gateway, and Cloud Functions to optimize cost and performance</li>
-              <li><strong>DevOps & Automation:</strong> Implementing CI/CD pipelines with Docker, Kubernetes, Jenkins, Cloud Run and GitHub Actions, ensuring reliable and efficient deployment across environments</li>
-              <li><strong>Data Management & Analytics:</strong> Designing data strategies with databases, messaging and integrations like PostgreSQL, MongoDB, Redis, Elasticsearch and RabbitMQ for efficient data flow and big data processing</li>
-              <li><strong>Infrastructure & Security Services:</strong> Managing domain and infrastructure with services like Cloudflare for DNS, security, firewall protection, and performance optimization to ensure robust and secure deployments</li>
+              <li><strong>Cloud & Serverless Solutions:</strong> Proficient in major cloud platforms, deploying serverless architectures to optimize cost and performance</li>
+              <li><strong>DevOps & Automation:</strong> Implementing CI/CD pipelines and containerization strategies, ensuring reliable and efficient deployment across environments</li>
+              <li><strong>Data Management & Analytics:</strong> Designing data strategies with databases, messaging and integrations for efficient data flow and big data processing</li>
+              <li><strong>Infrastructure & Security Services:</strong> Managing domain and infrastructure with services for security, firewall protection, and performance optimization to ensure robust and secure deployments</li>
             </ul>
           </div>
           
