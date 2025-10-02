@@ -1,0 +1,8 @@
+# robots.txt for https://www.westhash.io/
+User-agent: *
+Allow: /
+
+# Block build artifacts (if exposed)
+Disallow: /dist/
+
+Sitemap: https://www.westhash.io/sitemap.xml
