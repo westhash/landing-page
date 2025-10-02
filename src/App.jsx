@@ -37,10 +37,8 @@ export default function App() {
       }
     }
     updatePadding()
-    window.addEventListener('resize', updatePadding)
     window.addEventListener('orientationchange', updatePadding)
     return () => {
-      window.removeEventListener('resize', updatePadding)
       window.removeEventListener('orientationchange', updatePadding)
     }
   }, [])
