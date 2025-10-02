@@ -33,7 +33,7 @@ export default function App() {
       if (headerRef.current) {
         const height = headerRef.current.offsetHeight
         const isLandscape = window.innerWidth > window.innerHeight
-        setHeroPaddingTop(height + (isLandscape ? 20 : -20)) 
+        setHeroPaddingTop(height + (isLandscape ? 20 : -25)) 
       }
     }
     updatePadding()
