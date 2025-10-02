@@ -14,7 +14,7 @@
   padding: 1rem 2rem 1rem;
   text-align: center;
   background: var(--surface);
-  transition: all 0.4s ease;
+  /* transition: all 0.4s ease; */
 }
 
 .header .brand {
@@ -33,7 +33,7 @@
   letter-spacing: 2px;
   color: var(--text-dim, #888);
   margin: 0;
-  transition: all 0.1s ease;
+  /* transition: all 0.1s ease; */
 }
 
 .tag-hidden {
