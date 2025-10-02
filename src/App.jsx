@@ -13,7 +13,7 @@ export default function App() {
       const scrollY = window.scrollY
       const maxScroll = 220
       const startSize = Math.min(8, window.innerWidth / 100)
-      const endSize = 1.2
+      const endSize = 1.3
       const size = Math.max(startSize - (scrollY / maxScroll) * (startSize - endSize), endSize)
       setBrandFontSize(`${size}rem`)
 
