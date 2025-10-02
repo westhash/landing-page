@@ -5,6 +5,7 @@ export default function App() {
   const [brandFontSize, setBrandFontSize] = useState('8rem')
   const [heroPaddingTop, setHeroPaddingTop] = useState(0)
   const [headerBlur, setHeaderBlur] = useState('10px')
+  const [tagVisible, setTagVisible] = useState(false)
   const headerRef = useRef(null)
 
   useEffect(() => {
@@ -18,6 +19,8 @@ export default function App() {
 
       const blurValue = Math.max(1, 10 - (scrollY / maxScroll) * 9)
       setHeaderBlur(`${blurValue}px`)
+
+      setTagVisible(scrollY > 300)
     }
     updateFontSize() // Initialize on mount
     window.addEventListener('scroll', updateFontSize)
@@ -47,7 +50,7 @@ export default function App() {
     <div className="app-container">
       <header ref={headerRef} className={`header ${window.scrollY > 220 ? 'header-scrolled' : ''}`} style={{ backdropFilter: `blur(${headerBlur})` }}>
         <div className="brand" style={{ fontSize: brandFontSize }}><b>West<span><b>#</b></span></b></div>
-        <p className={`tag ${window.scrollY > 220 ? 'tag-visible' : 'tag-hidden'}`}><>web3 technologies</></p>
+        <p className={`tag ${tagVisible ? 'tag-visible' : 'tag-hidden'}`}><>web3 technologies</></p>
       </header>
       
       <section className="hero-section" style={{ paddingTop: `${heroPaddingTop}px` }}>
