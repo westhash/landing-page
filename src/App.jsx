@@ -10,7 +10,7 @@ export default function App() {
   useEffect(() => {
     const updateFontSize = () => {
       const scrollY = window.scrollY
-      const maxScroll = 150
+      const maxScroll = 220
       const startSize = Math.min(8, window.innerWidth / 100)
       const endSize = 1.2
       const size = Math.max(startSize - (scrollY / maxScroll) * (startSize - endSize), endSize)
@@ -45,9 +45,9 @@ export default function App() {
 
   return (
     <div className="app-container">
-      <header ref={headerRef} className={`header ${window.scrollY > 150 ? 'header-scrolled' : ''}`} style={{ backdropFilter: `blur(${headerBlur})` }}>
+      <header ref={headerRef} className={`header ${window.scrollY > 220 ? 'header-scrolled' : ''}`} style={{ backdropFilter: `blur(${headerBlur})` }}>
         <div className="brand" style={{ fontSize: brandFontSize }}><b>West<span><b>#</b></span></b></div>
-        <p className={`tag ${window.scrollY > 150 ? 'tag-visible' : 'tag-hidden'}`}><>web3 technologies</></p>
+        <p className={`tag ${window.scrollY > 220 ? 'tag-visible' : 'tag-hidden'}`}><>web3 technologies</></p>
       </header>
       
       <section className="hero-section" style={{ paddingTop: `${heroPaddingTop}px` }}>
