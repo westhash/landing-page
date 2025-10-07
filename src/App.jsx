@@ -52,12 +52,12 @@ export default function App() {
     <div className="app-container">
       <header ref={headerRef} className={`header ${headerScrolled ? 'header-scrolled' : ''}`} style={{ backdropFilter: `blur(${headerBlur})` }}>
         <div className="brand" style={{ fontSize: brandFontSize }}><b>West<span><b>#</b></span></b></div>
-        <p className={`tag ${tagVisible ? 'tag-visible' : 'tag-hidden'}`}><>web3 technologies</></p>
+        <p className={`tag ${tagVisible ? 'tag-visible' : 'tag-hidden'}`}><>web technologies</></p>
       </header>
       
       <section className="hero-section" style={{ paddingTop: `${heroPaddingTop}px` }}>
         <div className="hero-content">
-          <h1>Enterprise Solutions with Web3 & Cloud Technologies</h1>
+          <h1>Enterprise Solutions with On-Chain & Cloud Technologies</h1>
           <p>Empowering businesses with scalable, secure, and cutting-edge software engineering services.</p>
         </div>
       </section>
@@ -65,7 +65,7 @@ export default function App() {
       <main className="main-content">
         <div className="center-block">
           <div className="bio-section">
-            <p>With over 15 years of experience in enterprise environments, WestHash specializes in scalable architectures and modern web development technologies. Experts in Web3 integrations, cloud computing, serverless architecture, and innovative full-stack solutions.</p>
+            <p>With over 15 years of experience in enterprise environments, WestHash specializes in scalable architectures and modern web development technologies. Experts in decentralized systems, cloud computing, serverless architecture, and innovative full-stack solutions.</p>
           </div>
           
           <div className="skills-section">
@@ -73,7 +73,7 @@ export default function App() {
             <ul>
               <li><strong>Strategic Solution Architecture:</strong> Designing and selecting optimal architectural patterns, from monolithic to distributed systems, to meet enterprise requirements</li>
               <li><strong>Adaptive Full-Stack Development:</strong> Building scalable and maintainable solutions with modern web technologies</li>
-              <li><strong>Web3 & Blockchain Integration:</strong> Designing and implementing decentralized applications, leveraging major blockchain protocols and standards</li>
+              <li><strong>On-Chain Systems Design:</strong> Designing and implementing decentralized applications, leveraging major blockchain protocols and standards</li>
               <li><strong>Cloud & Serverless Solutions:</strong> Architecting and deploying serverless systems on leading cloud platforms to optimize cost, scalability, and performance</li>
               <li><strong>DevOps & Automation:</strong> Implementing CI/CD pipelines, containerization, and automation strategies for reliable and efficient delivery</li>
               <li><strong>Data Management & Analytics:</strong> Engineering robust data strategies with databases, messaging, and integrations for seamless flow and big data processing</li>
