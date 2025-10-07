@@ -57,7 +57,7 @@ export default function App() {
       
       <section className="hero-section" style={{ paddingTop: `${heroPaddingTop}px` }}>
         <div className="hero-content">
-          <h1>Enterprise Solutions with On-Chain & Cloud Technologies</h1>
+          <h1>Enterprise Solutions — On-Chain & Cloud Technologies</h1>
           <p>Empowering businesses with scalable, secure, and cutting-edge software engineering services.</p>
         </div>
       </section>
