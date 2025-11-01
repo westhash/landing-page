@@ -298,7 +298,7 @@
 
 /* Footer */
 .footer {
-  padding: 3rem 2rem 2rem;
+  padding: 3rem 2rem 1rem;
   background: var(--surface);
   border-top: 1px solid var(--border);
 }
@@ -341,7 +341,8 @@
 
 .footer-bottom {
   text-align: center;
-  padding-top: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 0rem;
   border-top: 1px solid var(--border);
 }
 
