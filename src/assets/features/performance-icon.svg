@@ -1,0 +1,9 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Main circle -->
+  <circle cx="24" cy="24" r="21" fill="#646cff"/>
+  
+  <!-- Lightning bolt - more angular and bold -->
+  <path d="M29 10L17 25H23L19 38L31 23H25L29 10Z" 
+        fill="white" 
+        opacity="0.95"/>
+</svg>

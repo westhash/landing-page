@@ -1,0 +1,9 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Main circle -->
+  <circle cx="24" cy="24" r="21" fill="#646cff"/>
+  
+  <!-- Shield - classic shield shape -->
+  <path d="M24 11L15 14V22C15 28 19 33 24 36C29 33 33 28 33 22V14L24 11Z" 
+        fill="white" 
+        opacity="0.95"/>
+</svg>

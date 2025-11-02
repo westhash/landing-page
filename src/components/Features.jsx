@@ -1,7 +1,7 @@
-import performanceIcon from '../assets/performance-icon.svg'
-import securityIcon from '../assets/security-icon.svg'
-import scalabilityIcon from '../assets/scalability-icon.svg'
-import reliabilityIcon from '../assets/reliability-icon.svg'
+import performanceIcon from '../assets/features/performance-icon.svg'
+import securityIcon from '../assets/features/security-icon.svg'
+import scalabilityIcon from '../assets/features/scalability-icon.svg'
+import reliabilityIcon from '../assets/features/reliability-icon.svg'
 
 export default function Features() {
   return (
