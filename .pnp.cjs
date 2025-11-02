@@ -38,6 +38,7 @@ const RAW_RUNTIME_STATE =
           ["globals", "npm:16.4.0"],\
           ["react", "npm:19.1.1"],\
           ["react-dom", "virtual:de1f60732beed55cf4b9d96eea9e3372352ac789e5434b4e749ad7857096c619cea86454e2d2bef83b0c912e5dc08275ef3b435536e241eaafab07edc54dc712#npm:19.1.1"],\
+          ["react-router-dom", "virtual:de1f60732beed55cf4b9d96eea9e3372352ac789e5434b4e749ad7857096c619cea86454e2d2bef83b0c912e5dc08275ef3b435536e241eaafab07edc54dc712#npm:7.9.5"],\
           ["vite", "virtual:de1f60732beed55cf4b9d96eea9e3372352ac789e5434b4e749ad7857096c619cea86454e2d2bef83b0c912e5dc08275ef3b435536e241eaafab07edc54dc712#npm:7.1.6"],\
           ["westhash-landingpage", "workspace:."]\
         ],\
@@ -1374,6 +1375,15 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["cookie", [\
+      ["npm:1.0.2", {\
+        "packageLocation": "../../../../.yarn/berry/cache/cookie-npm-1.0.2-7a4273d897-10c0.zip/node_modules/cookie/",\
+        "packageDependencies": [\
+          ["cookie", "npm:1.0.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["cross-spawn", [\
       ["npm:7.0.6", {\
         "packageLocation": "../../../../.yarn/berry/cache/cross-spawn-npm-7.0.6-264bddf921-10c0.zip/node_modules/cross-spawn/",\
@@ -2575,6 +2585,61 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["react-router", [\
+      ["npm:7.9.5", {\
+        "packageLocation": "../../../../.yarn/berry/cache/react-router-npm-7.9.5-b6ac20ba65-10c0.zip/node_modules/react-router/",\
+        "packageDependencies": [\
+          ["react-router", "npm:7.9.5"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:eddaf0a87362831346c6bbbb1fc7bd272794b6fa8279275da49ca9beccdd904f778fc02fceee868bebe9632cac5c772a22ccff3a4549e4f1f88ab25cb34e903a#npm:7.9.5", {\
+        "packageLocation": "./.yarn/__virtual__/react-router-virtual-a87cdd8533/5/.yarn/berry/cache/react-router-npm-7.9.5-b6ac20ba65-10c0.zip/node_modules/react-router/",\
+        "packageDependencies": [\
+          ["@types/react", "npm:19.1.13"],\
+          ["@types/react-dom", "virtual:de1f60732beed55cf4b9d96eea9e3372352ac789e5434b4e749ad7857096c619cea86454e2d2bef83b0c912e5dc08275ef3b435536e241eaafab07edc54dc712#npm:19.1.9"],\
+          ["cookie", "npm:1.0.2"],\
+          ["react", "npm:19.1.1"],\
+          ["react-dom", "virtual:de1f60732beed55cf4b9d96eea9e3372352ac789e5434b4e749ad7857096c619cea86454e2d2bef83b0c912e5dc08275ef3b435536e241eaafab07edc54dc712#npm:19.1.1"],\
+          ["react-router", "virtual:eddaf0a87362831346c6bbbb1fc7bd272794b6fa8279275da49ca9beccdd904f778fc02fceee868bebe9632cac5c772a22ccff3a4549e4f1f88ab25cb34e903a#npm:7.9.5"],\
+          ["set-cookie-parser", "npm:2.7.2"]\
+        ],\
+        "packagePeers": [\
+          "@types/react-dom",\
+          "@types/react",\
+          "react-dom",\
+          "react"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["react-router-dom", [\
+      ["npm:7.9.5", {\
+        "packageLocation": "../../../../.yarn/berry/cache/react-router-dom-npm-7.9.5-5bab62adba-10c0.zip/node_modules/react-router-dom/",\
+        "packageDependencies": [\
+          ["react-router-dom", "npm:7.9.5"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:de1f60732beed55cf4b9d96eea9e3372352ac789e5434b4e749ad7857096c619cea86454e2d2bef83b0c912e5dc08275ef3b435536e241eaafab07edc54dc712#npm:7.9.5", {\
+        "packageLocation": "./.yarn/__virtual__/react-router-dom-virtual-eddaf0a873/5/.yarn/berry/cache/react-router-dom-npm-7.9.5-5bab62adba-10c0.zip/node_modules/react-router-dom/",\
+        "packageDependencies": [\
+          ["@types/react", "npm:19.1.13"],\
+          ["@types/react-dom", "virtual:de1f60732beed55cf4b9d96eea9e3372352ac789e5434b4e749ad7857096c619cea86454e2d2bef83b0c912e5dc08275ef3b435536e241eaafab07edc54dc712#npm:19.1.9"],\
+          ["react", "npm:19.1.1"],\
+          ["react-dom", "virtual:de1f60732beed55cf4b9d96eea9e3372352ac789e5434b4e749ad7857096c619cea86454e2d2bef83b0c912e5dc08275ef3b435536e241eaafab07edc54dc712#npm:19.1.1"],\
+          ["react-router", "virtual:eddaf0a87362831346c6bbbb1fc7bd272794b6fa8279275da49ca9beccdd904f778fc02fceee868bebe9632cac5c772a22ccff3a4549e4f1f88ab25cb34e903a#npm:7.9.5"],\
+          ["react-router-dom", "virtual:de1f60732beed55cf4b9d96eea9e3372352ac789e5434b4e749ad7857096c619cea86454e2d2bef83b0c912e5dc08275ef3b435536e241eaafab07edc54dc712#npm:7.9.5"]\
+        ],\
+        "packagePeers": [\
+          "@types/react-dom",\
+          "@types/react",\
+          "react-dom",\
+          "react"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["resolve-from", [\
       ["npm:4.0.0", {\
         "packageLocation": "../../../../.yarn/berry/cache/resolve-from-npm-4.0.0-f758ec21bf-10c0.zip/node_modules/resolve-from/",\
@@ -2655,6 +2720,15 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../../../.yarn/berry/cache/semver-npm-7.7.2-dfc3bc5ec9-10c0.zip/node_modules/semver/",\
         "packageDependencies": [\
           ["semver", "npm:7.7.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["set-cookie-parser", [\
+      ["npm:2.7.2", {\
+        "packageLocation": "../../../../.yarn/berry/cache/set-cookie-parser-npm-2.7.2-e1a4d1221b-10c0.zip/node_modules/set-cookie-parser/",\
+        "packageDependencies": [\
+          ["set-cookie-parser", "npm:2.7.2"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -2968,6 +3042,7 @@ const RAW_RUNTIME_STATE =
           ["globals", "npm:16.4.0"],\
           ["react", "npm:19.1.1"],\
           ["react-dom", "virtual:de1f60732beed55cf4b9d96eea9e3372352ac789e5434b4e749ad7857096c619cea86454e2d2bef83b0c912e5dc08275ef3b435536e241eaafab07edc54dc712#npm:19.1.1"],\
+          ["react-router-dom", "virtual:de1f60732beed55cf4b9d96eea9e3372352ac789e5434b4e749ad7857096c619cea86454e2d2bef83b0c912e5dc08275ef3b435536e241eaafab07edc54dc712#npm:7.9.5"],\
           ["vite", "virtual:de1f60732beed55cf4b9d96eea9e3372352ac789e5434b4e749ad7857096c619cea86454e2d2bef83b0c912e5dc08275ef3b435536e241eaafab07edc54dc712#npm:7.1.6"],\
           ["westhash-landingpage", "workspace:."]\
         ],\

@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef, useLayoutEffect } from 'react'
 import './App.css'
+import Footer from './components/Footer'
 
 export default function App() {
   const [brandFontSize, setBrandFontSize] = useState('8rem')
@@ -73,22 +74,22 @@ export default function App() {
             <div className="feature-card">
               <div className="feature-icon">⚡</div>
               <h3>Performance</h3>
-              <p>[Placeholder: High-performance solutions optimized for speed and efficiency]</p>
+              <p>Optimized architectures leveraging cutting-edge technologies and best practices to deliver blazing-fast applications with minimal latency and maximum throughput</p>
             </div>
             <div className="feature-card">
               <div className="feature-icon">🔒</div>
               <h3>Security</h3>
-              <p>[Placeholder: Enterprise-grade security with best practices]</p>
+              <p>Enterprise-grade security protocols, encryption standards, and comprehensive auditing to protect your data and ensure compliance with industry regulations</p>
             </div>
             <div className="feature-card">
               <div className="feature-icon">📈</div>
               <h3>Scalability</h3>
-              <p>[Placeholder: Built to scale with your business growth]</p>
+              <p>Cloud-native solutions designed to grow seamlessly with your business, from startup MVPs to enterprise-scale distributed systems handling millions of requests</p>
             </div>
             <div className="feature-card">
               <div className="feature-icon">🎯</div>
               <h3>Reliability</h3>
-              <p>[Placeholder: Dependable systems with high availability]</p>
+              <p>High-availability infrastructure with automated monitoring, disaster recovery, and 99.9% uptime SLA to keep your business running 24/7</p>
             </div>
           </div>
         </div>
@@ -131,7 +132,7 @@ export default function App() {
           <h2 className="section-title">About WestHash</h2>
           <div className="about-content">
             <p>With over 15 years of experience in enterprise environments, WestHash specializes in scalable architectures and modern web development technologies. Experts in decentralized systems, cloud computing, serverless architecture, and innovative full-stack solutions.</p>
-            <p>[Placeholder: Additional company information and values]</p>
+            <p>Our mission is to empower businesses with cutting-edge technology solutions that drive innovation and growth. We combine deep technical expertise with a pragmatic approach to deliver results that matter. From blockchain integration to cloud transformation, we're committed to excellence in every project we undertake.</p>
           </div>
         </div>
       </section>
@@ -140,7 +141,7 @@ export default function App() {
         <div className="container">
           <h2 className="section-title">Get In Touch</h2>
           <div className="contact-content">
-            <p className="contact-text">[Placeholder: Ready to transform your business? Contact us today]</p>
+            <p className="contact-text">Ready to transform your business with innovative technology solutions? Let's discuss how we can help you achieve your goals.</p>
             <a className="contact-btn" href="mailto:team@westhash.io">team@westhash.io</a>
             <div className="social-links">
               <a href="https://linkedin.com/company/westhash" target="_blank" rel="noopener noreferrer">LinkedIn</a>
@@ -150,37 +151,7 @@ export default function App() {
         </div>
       </section>
       
-      <footer className="footer">
-        <div className="footer-content">
-          <div className="footer-section">
-            <h4>Company</h4>
-            <ul>
-              <li><a href="#about">About Us</a></li>
-              <li><a href="#services">Services</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-          </div>
-          <div className="footer-section">
-            <h4>Legal</h4>
-            <ul>
-              <li><a href="/privacy">[Privacy Policy]</a></li>
-              <li><a href="/terms">[Terms of Service]</a></li>
-              <li><a href="/cookies">[Cookie Policy]</a></li>
-            </ul>
-          </div>
-          <div className="footer-section">
-            <h4>Connect</h4>
-            <ul>
-              <li><a href="https://linkedin.com/company/westhash" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-              <li><a href="https://app.ens.domains/name/westhash.eth" target="_blank" rel="noopener noreferrer">ENS</a></li>
-              <li><a href="https://github.com/westhash" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-            </ul>
-          </div>
-        </div>
-        <div className="footer-bottom">
-          <p>© {new Date().getFullYear()} WestHash LLC - Wyoming, US</p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   )
 }
