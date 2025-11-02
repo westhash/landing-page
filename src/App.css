@@ -140,6 +140,7 @@
 .btn-secondary:hover {
   border-color: var(--brand);
   background-size: 0;
+  color: var(--text);
 }
 
 /* Sections */
@@ -296,6 +297,10 @@
 
 .social-links a {
   font-size: 0.95rem;
+}
+
+.social-links a:hover {
+  color: var(--brand);
 }
 
 /* Footer */
