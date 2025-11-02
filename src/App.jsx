@@ -99,28 +99,28 @@ export default function App() {
           <h2 className="section-title">Our Services</h2>
           <div className="services-grid">
             <div className="service-card">
-              <h3>Strategic Solution Architecture</h3>
-              <p>[Placeholder: Designing optimal architectural patterns for enterprise requirements]</p>
+              <h3>Architecture & Development</h3>
+              <p>Designing optimal architectural patterns and building scalable, maintainable solutions with modern full-stack technologies to meet enterprise requirements</p>
             </div>
             <div className="service-card">
-              <h3>Full-Stack Development</h3>
-              <p>[Placeholder: Building scalable solutions with modern web technologies]</p>
+              <h3>On-chain systems</h3>
+              <p>Designing and implementing decentralized applications, leveraging major blockchain protocols and standards for on-chain systems</p>
             </div>
             <div className="service-card">
-              <h3>On-Chain Systems</h3>
-              <p>[Placeholder: Decentralized applications and blockchain integration]</p>
-            </div>
-            <div className="service-card">
-              <h3>Cloud & Serverless</h3>
-              <p>[Placeholder: Optimized cloud architecture and deployment]</p>
+              <h3>Cloud & Infrastructure</h3>
+              <p>Architecting serverless systems on leading cloud platforms and managing infrastructure with robust security measures for resilient, high-performing deployments</p>
             </div>
             <div className="service-card">
               <h3>DevOps & Automation</h3>
-              <p>[Placeholder: CI/CD pipelines and infrastructure automation]</p>
+              <p>Implementing CI/CD pipelines, containerization, and automation strategies for reliable and efficient delivery</p>
             </div>
             <div className="service-card">
-              <h3>Security & Infrastructure</h3>
-              <p>[Placeholder: Secure and resilient infrastructure management]</p>
+              <h3>Data Engineering</h3>
+              <p>Engineering robust data strategies with databases, messaging, and integrations for seamless flow and big data processing</p>
+            </div>
+            <div className="service-card">
+              <h3>Security & Compliance</h3>
+              <p>Implementing comprehensive security measures, infrastructure protection, and compliance frameworks to ensure safe and reliable operations</p>
             </div>
           </div>
         </div>
@@ -143,7 +143,7 @@ export default function App() {
             <p className="contact-text">[Placeholder: Ready to transform your business? Contact us today]</p>
             <a className="contact-btn" href="mailto:team@westhash.io">team@westhash.io</a>
             <div className="social-links">
-              <a href="https://github.com/westhash" target="_blank" rel="noopener noreferrer">GitHub</a>
+              <a href="https://linkedin.com/company/westhash" target="_blank" rel="noopener noreferrer">LinkedIn</a>
               <a href="https://app.ens.domains/name/westhash.eth" target="_blank" rel="noopener noreferrer">ENS</a>
             </div>
           </div>
@@ -171,9 +171,9 @@ export default function App() {
           <div className="footer-section">
             <h4>Connect</h4>
             <ul>
-              <li><a href="https://github.com/westhash" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+              <li><a href="https://linkedin.com/company/westhash" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
               <li><a href="https://app.ens.domains/name/westhash.eth" target="_blank" rel="noopener noreferrer">ENS</a></li>
-              <li><a href="mailto:team@westhash.io">Email</a></li>
+              <li><a href="https://github.com/westhash" target="_blank" rel="noopener noreferrer">GitHub</a></li>
             </ul>
           </div>
         </div>
