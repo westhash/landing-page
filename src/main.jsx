@@ -7,11 +7,13 @@ import Privacy from './pages/Privacy.jsx'
 import Terms from './pages/Terms.jsx'
 import Cookies from './pages/Cookies.jsx'
 import ScrollToTop from './components/ScrollToTop.jsx'
+import ScrollToSection from './components/ScrollToSection.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
       <ScrollToTop />
+      <ScrollToSection />
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/privacy" element={<Privacy />} />

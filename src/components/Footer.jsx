@@ -1,15 +1,18 @@
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 
 export default function Footer() {
+  const location = useLocation()
+  const isHome = location.pathname === '/'
+
   return (
     <footer className="footer">
       <div className="footer-content">
         <div className="footer-section">
           <h4>Company</h4>
           <ul>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><Link to={isHome ? '#about' : '/#about'}>About Us</Link></li>
+            <li><Link to={isHome ? '#services' : '/#services'}>Services</Link></li>
+            <li><Link to={isHome ? '#contact' : '/#contact'}>Contact</Link></li>
           </ul>
         </div>
         <div className="footer-section">
