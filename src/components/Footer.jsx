@@ -33,7 +33,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="footer-bottom">
-        <p>© {new Date().getFullYear()} WestHash LLC — West#™ </p>
+        <p>West#™ — © {new Date().getFullYear()} WestHash LLC</p>
       </div>
     </footer>
   )
