@@ -117,9 +117,10 @@ export default function Privacy() {
             <h2>13. Contact Us</h2>
             <p>If you have any questions about this Privacy Policy, please contact us:</p>
             <p>
-              <strong>WestHash LLC</strong><br />
-              Email: <a href="mailto:team@westhash.io">team@westhash.io</a><br />
-              Location: Wyoming, United States
+              <strong>WestHash LLC</strong><br />              
+              5830 E 2nd St, Ste 7000 #29151<br />
+              Casper, Wyoming 82609, US<br />
+              <a href="mailto:team@westhash.io">team@westhash.io</a>
             </p>
           </div>
 
