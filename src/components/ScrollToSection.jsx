@@ -8,7 +8,7 @@ export default function ScrollToSection() {
     if (location.hash) {
       const element = document.getElementById(location.hash.substring(1))
       if (element) {
-        setTimeout(() => element.scrollIntoView({ block: 'start' }), 0)
+        setTimeout(() => element.scrollIntoView({ behavior: 'instant', block: 'start' }), 0)
       }
     }
   }, [location])
