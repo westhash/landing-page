@@ -1,17 +1,9 @@
 <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- Main circle -->
-  <circle cx="24" cy="24" r="21" fill="#646cff"/>
-  
-  <!-- Arrow pointing up - minimal growth symbol -->
-  <path d="M24 14L24 34M24 14L18 20M24 14L30 20" 
-        stroke="white" 
-        stroke-width="3" 
-        stroke-linecap="round" 
-        stroke-linejoin="round"
-        opacity="0.95"/>
-  <path d="M16 34L32 34" 
-        stroke="white" 
-        stroke-width="3" 
-        stroke-linecap="round"
-        opacity="0.95"/>
+  <!-- Growing bars - scalability symbol -->
+  <g fill="#646cff">
+    <rect x="6" y="34" width="8" height="12" rx="2"/>
+    <rect x="17" y="26" width="8" height="20" rx="2"/>
+    <rect x="28" y="18" width="8" height="28" rx="2"/>
+    <rect x="39" y="10" width="8" height="36" rx="2"/>
+  </g>
 </svg>

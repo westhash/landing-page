@@ -1,9 +1,9 @@
 <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- Main circle -->
-  <circle cx="24" cy="24" r="21" fill="#646cff"/>
-  
-  <!-- Shield - classic shield shape -->
-  <path d="M24 11L15 14V22C15 28 19 33 24 36C29 33 33 28 33 22V14L24 11Z" 
-        fill="white" 
-        opacity="0.95"/>
+  <!-- Shield - security symbol -->
+  <path d="M24 4L6 11V22C6 32.5 13 42 24 46C35 42 42 32.5 42 22V11L24 4Z" 
+        fill="#646cff"
+        stroke="#646cff"
+        stroke-width="2"
+        stroke-linejoin="round"
+        stroke-linecap="round"/>
 </svg>
