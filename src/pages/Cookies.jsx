@@ -18,33 +18,41 @@ export default function Cookies() {
         <div className="container">
           <h1 className="section-title">Cookie Policy</h1>
           <div className="legal-content">
-            <p className="legal-update">Last Updated: November 2, 2025</p>
+            <p className="legal-update">Last Updated: November 3, 2025</p>
 
             <h2>1. What Are Cookies</h2>
             <p>
               Cookies are small text files that are stored on your device (computer, tablet, or mobile) when you visit a website. They are widely used to make websites work more efficiently and provide information to website owners.
             </p>
 
-            <h2>2. Our Current Cookie Usage</h2>
+            <h2>2. Cookies We Use</h2>
             <p>
-              <strong>WestHash LLC currently does not use any cookies on this website.</strong> Our website is designed to function without collecting or storing any information through cookies or similar tracking technologies.
-            </p>
-            <p>
-              We have chosen to build a privacy-focused website that respects your browsing experience without the need for cookie consent banners or tracking mechanisms.
+              WestHash LLC is committed to your privacy. We only use one essential security cookie required for website protection. We do not use any analytics, marketing, or tracking cookies.
             </p>
 
-            <h2>3. Third-Party Services</h2>
+            <h3>2.1 Security Cookie</h3>
             <p>
-              While we don't use cookies ourselves, when you interact with external links on our website (such as LinkedIn, GitHub, or ENS), those third-party platforms may set their own cookies according to their privacy policies:
+              Our website infrastructure uses Cloudflare for security and DDoS protection. Cloudflare may set a security cookie (<code>cf_clearance</code>) to verify that you are a legitimate visitor and not a bot. This cookie expires after 1 year.
+            </p>
+            <p>
+              These third parties have their own privacy policies and cookie policies:
+            </p>
+            <ul>
+              <li>Cloudflare Cookie Policy: <a href="https://www.cloudflare.com/cookie-policy/" target="_blank" rel="noopener noreferrer">https://www.cloudflare.com/cookie-policy/</a></li>
+            </ul>
+            <p>
+              <strong>Legal Basis:</strong> This cookie is strictly necessary for website security (GDPR Article 6(1)(f)) and does not require user consent.
+            </p>
+
+            <h2>3. Third-Party Links</h2>
+            <p>
+              When you interact with external links on our website (such as LinkedIn, GitHub, or ENS), those third-party platforms may set their own cookies according to their privacy policies:
             </p>
             <ul>
               <li><strong>LinkedIn:</strong> When clicking on our LinkedIn profile links</li>
               <li><strong>GitHub:</strong> When visiting our GitHub repositories</li>
               <li><strong>ENS Domains:</strong> When viewing our ENS domain information</li>
             </ul>
-            <p>
-              These third parties have their own privacy policies and cookie policies. We recommend reviewing their policies to understand how they handle your data.
-            </p>
 
             <h2>4. Local Storage</h2>
             <p>
@@ -62,13 +70,13 @@ export default function Cookies() {
               <li>Only use cookies that are necessary or consented to</li>
             </ul>
 
-            <h2>6. Your Privacy Rights</h2>
+            <h2>6. Managing Cookies</h2>
             <p>
-              Since we don't use cookies, you don't need to worry about managing cookie preferences on our website. However, you can still control your general browsing privacy through your browser settings.
+              While our strictly necessary security cookie (cf_clearance) cannot be disabled without affecting website functionality, you can manage cookies through your browser settings if desired. Please note that blocking this cookie may prevent you from accessing the website.
             </p>
 
-            <h3>6.1 Browser Privacy Settings</h3>
-            <p>For enhanced privacy across all websites you visit, you can adjust your browser settings:</p>
+            <h3>6.1 Browser Cookie Settings</h3>
+            <p>You can manage cookies through your browser settings:</p>
             <ul>
               <li><strong>Chrome:</strong> Settings → Privacy and security → Cookies and other site data</li>
               <li><strong>Firefox:</strong> Options → Privacy & Security → Enhanced Tracking Protection</li>
@@ -78,7 +86,7 @@ export default function Cookies() {
 
             <h2>7. Do Not Track Signals</h2>
             <p>
-              We respect "Do Not Track" (DNT) browser signals. Since our website doesn't track users or use cookies, all visitors enjoy a tracking-free experience by default.
+              We respect "Do Not Track" (DNT) browser signals. Our website only uses essential security cookies and does not engage in any tracking, profiling, or behavioral advertising.
             </p>
 
             <h2>8. Updates to This Cookie Policy</h2>
@@ -88,14 +96,18 @@ export default function Cookies() {
 
             <h2>9. GDPR Compliance</h2>
             <p>
-              Our cookie-free approach ensures full compliance with GDPR and other privacy regulations. You can browse our website without concerns about:
+              Our minimal cookie approach ensures compliance with GDPR and other privacy regulations:
             </p>
             <ul>
-              <li>Cookie consent banners</li>
-              <li>Tracking or profiling</li>
-              <li>Third-party data collection</li>
-              <li>Cross-site tracking</li>
+              <li><strong>No consent required:</strong> We only use strictly necessary cookies for security purposes</li>
+              <li><strong>No tracking:</strong> We do not track or profile visitors</li>
+              <li><strong>No analytics cookies:</strong> We do not use Google Analytics or similar tools</li>
+              <li><strong>No marketing cookies:</strong> We do not use advertising or retargeting cookies</li>
+              <li><strong>Transparent:</strong> We clearly disclose the only cookie we use (cf_clearance)</li>
             </ul>
+            <p>
+              Under GDPR Article 6(1)(f), strictly necessary cookies do not require user consent as they are essential for the legitimate interest of providing a secure website.
+            </p>
 
             <h2>10. Contact Us</h2>
             <p>
@@ -111,7 +123,7 @@ export default function Cookies() {
             <div className="cookie-notice">
               <h3>Privacy-First Approach</h3>
               <p>
-                We believe in respecting your privacy from the start. Our website is designed to function fully without cookies, providing you with a seamless, privacy-focused browsing experience.
+                We believe in respecting your privacy from the start. Our website uses only one security cookie managed by our infrastructure provider. We do not collect, store, or process any personal data. No tracking, no analytics, no profiling. Your visit is completely private.
               </p>
             </div>
           </div>
