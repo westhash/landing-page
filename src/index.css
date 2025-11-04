@@ -12,7 +12,7 @@
   --text-dim: #9a9a9a;
   --surface: rgba(29, 29, 29, 0.9);
   --surface-strong: rgba(29, 29, 29, 0.95);
-  --hero-bg: linear-gradient(135deg, rgba(var(--brand-rgb), 0.1), rgba(var(--brand-rgb), 0.05));
+  --hero-bg: linear-gradient(135deg, rgba(var(--brand-rgb), 0.3), rgba(var(--brand-rgb), 0.25));
   --border: rgba(255, 255, 255, 0.1);
   color: var(--text);
   background: radial-gradient(circle at 20% 25%, var(--bg-start), var(--bg));
@@ -67,7 +67,7 @@ button { font-family: inherit; }
     --brand-rgb: 50, 64, 255;
     --surface: rgba(255, 255, 255, 0.9);
     --surface-strong: rgba(255, 255, 255, 0.95);
-    --hero-bg: linear-gradient(135deg, rgba(var(--brand-rgb), 0.1), rgba(var(--brand-rgb), 0.05));
+    --hero-bg: linear-gradient(135deg, rgba(var(--brand-rgb), 0.35), rgba(var(--brand-rgb), 0.25));
     --border: rgba(0, 0, 0, 0.1);
   }
   body { background: var(--bg); }

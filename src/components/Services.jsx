@@ -6,27 +6,27 @@ export default function Services() {
         <div className="services-grid">
           <div className="service-card">
             <h3>Architecture & Development</h3>
-            <p>Designing optimal architectural patterns and building scalable, maintainable solutions with modern full-stack technologies to meet enterprise requirements</p>
+            <p>Scalable, maintainable solutions with modern full-stack technologies</p>
           </div>
           <div className="service-card">
             <h3>On-chain systems</h3>
-            <p>Designing and implementing decentralized applications, leveraging major blockchain protocols and standards for on-chain systems</p>
+            <p>Decentralized applications on major blockchain protocols</p>
           </div>
           <div className="service-card">
             <h3>Cloud & Infrastructure</h3>
-            <p>Architecting serverless systems on leading cloud platforms and managing infrastructure with robust security measures for resilient, high-performing deployments</p>
+            <p>Serverless systems and secure infrastructure on leading cloud platforms</p>
           </div>
           <div className="service-card">
             <h3>DevOps & Automation</h3>
-            <p>Implementing CI/CD pipelines, containerization, and automation strategies for reliable and efficient delivery</p>
+            <p>CI/CD pipelines, containerization, and automation for reliable delivery</p>
           </div>
           <div className="service-card">
             <h3>Data Engineering</h3>
-            <p>Engineering robust data strategies with databases, messaging, and integrations for seamless flow and big data processing</p>
+            <p>Robust data pipelines, integrations, and big data processing</p>
           </div>
           <div className="service-card">
             <h3>Security & Compliance</h3>
-            <p>Implementing comprehensive security measures, infrastructure protection, and compliance frameworks to ensure safe and reliable operations</p>
+            <p>Enterprise security and compliance frameworks for safe operations</p>
           </div>
         </div>
       </div>
