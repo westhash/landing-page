@@ -14,7 +14,7 @@ export default function Features() {
               <img src={performanceIcon} alt="Performance" />
             </div>
             <h3>Performance</h3>
-            <p>Optimized architectures for fast applications with minimal latency</p>
+            <p>Optimized architectures for fast applications with cost optimization</p>
           </div>
           <div className="feature-card">
             <div className="feature-icon">
@@ -35,7 +35,7 @@ export default function Features() {
               <img src={reliabilityIcon} alt="Reliability" />
             </div>
             <h3>Reliability</h3>
-            <p>High-availability infrastructure with 99.9% uptime</p>
+            <p>High-availability infrastructure with maximum uptime</p>
           </div>
         </div>
       </div>

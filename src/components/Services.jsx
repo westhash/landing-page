@@ -14,7 +14,7 @@ export default function Services() {
           </div>
           <div className="service-card">
             <h3>Cloud & Infrastructure</h3>
-            <p>Serverless systems and secure infrastructure on leading cloud platforms</p>
+            <p>Serverless systems and FinOps practices on leading cloud platforms</p>
           </div>
           <div className="service-card">
             <h3>DevOps & Automation</h3>
