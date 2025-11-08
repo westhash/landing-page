@@ -29,6 +29,12 @@
     />
     <meta name="theme-color" content="#646cff" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="application-name" content="WestHash" />
+    <meta name="apple-mobile-web-app-title" content="WestHash" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
     <title>WestHash | Web Technologies</title>
     <meta
       name="description"
@@ -80,33 +86,52 @@
     <!-- Performance hints (adjust if you start using external fonts/CDNs) -->
     <meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width" />
 
-    <!-- Structured Data (JSON-LD) -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "WestHash",
-        "legalName": "WestHash LLC",
-        "url": "https://www.westhash.io/",
-        "logo": "https://www.westhash.io/og-image.png",
-        "description": "Enterprise software engineering specializing in on-chain, cloud, and serverless architectures for scalable systems",
-        "sameAs": [
-          "https://github.com/westhash",
-          "https://app.ens.domains/name/westhash.eth"
+        "@graph": [
+          {
+            "@type": "Organization",
+            "name": "WestHash",
+            "legalName": "WestHash LLC",
+            "url": "https://www.westhash.io/",
+            "logo": "https://www.westhash.io/og-image.png",
+            "description": "Enterprise software engineering specializing in on-chain, cloud, and serverless architectures for scalable systems",
+            "sameAs": [
+              "https://github.com/westhash",
+              "https://app.ens.domains/name/westhash.eth"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "url": "https://www.westhash.io/",
+            "name": "WestHash | Enterprise Solutions leveraging On-Chain & Cloud Technologies",
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": "https://www.westhash.io/?q={search_term_string}",
+              "query-input": "required name=search_term_string"
+            }
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://www.westhash.io/#webpage",
+            "url": "https://www.westhash.io/",
+            "name": "WestHash – Enterprise On-Chain & Cloud Solutions",
+            "isPartOf": { "@id": "https://www.westhash.io/" },
+            "description": "WestHash delivers enterprise-grade Web3, cloud, serverless & full‑stack software engineering solutions.",
+            "inLanguage": "en",
+            "datePublished": "2025-01-01",
+            "dateModified": "2025-11-08"
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "WestHash Platform",
+            "applicationCategory": "DeveloperApplication",
+            "operatingSystem": "Any",
+            "description": "Platform for secure scalable on-chain and cloud integrations.",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+          }
         ]
-      }
-    </script>
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "url": "https://www.westhash.io/",
-        "name": "WestHash | Enterprise Solutions leveraging On-Chain & Cloud Technologies",
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": "https://www.westhash.io/?q={search_term_string}",
-          "query-input": "required name=search_term_string"
-        }
       }
     </script>
   </head>

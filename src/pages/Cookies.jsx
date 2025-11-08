@@ -18,7 +18,7 @@ export default function Cookies() {
         <div className="container">
           <h1 className="section-title">Cookie Policy</h1>
           <div className="legal-content">
-            <p className="legal-update">Last Updated: November 3, 2025</p>
+            <p className="legal-update">Last Updated: November 8, 2025</p>
 
             <h2>1. What Are Cookies</h2>
             <p>
@@ -72,7 +72,7 @@ export default function Cookies() {
 
             <h2>6. Managing Cookies</h2>
             <p>
-              While our strictly necessary security cookie (cf_clearance) cannot be disabled without affecting website functionality, you can manage cookies through your browser settings if desired. Please note that blocking this cookie may prevent you from accessing the website.
+              While our strictly necessary security cookie cannot be disabled without affecting website functionality, you can manage cookies through your browser settings if desired. Please note that blocking this cookie may prevent you from accessing the website.
             </p>
 
             <h3>6.1 Browser Cookie Settings</h3>
@@ -103,7 +103,6 @@ export default function Cookies() {
               <li><strong>No tracking:</strong> We do not track or profile visitors</li>
               <li><strong>No analytics cookies:</strong> We do not use Google Analytics or similar tools</li>
               <li><strong>No marketing cookies:</strong> We do not use advertising or retargeting cookies</li>
-              <li><strong>Transparent:</strong> We clearly disclose the only cookie we use (cf_clearance)</li>
             </ul>
             <p>
               Under GDPR Article 6(1)(f), strictly necessary cookies do not require user consent as they are essential for the legitimate interest of providing a secure website.
