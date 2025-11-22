@@ -18,7 +18,7 @@ export default function Terms() {
         <div className="container">
           <h1 className="section-title">Terms of Service</h1>
           <div className="legal-content">
-            <p className="legal-update">Last Updated: November 2, 2025</p>
+            <p className="legal-update">Last Updated: November 19, 2025</p>
 
             <h2>1. Agreement to Terms</h2>
             <p>
@@ -135,7 +135,7 @@ export default function Terms() {
 
             <h2>14. Dispute Resolution</h2>
             <p>
-              Any disputes arising from these Terms or our services shall be resolved through good faith negotiation. If negotiation fails, disputes will be resolved through binding arbitration in Wyoming, United States.
+              Any disputes arising from these Terms or our services shall be resolved through good faith negotiation. If negotiation fails, disputes will be resolved through binding arbitration, remotely by mutual agreement or in Wyoming, United States.
             </p>
 
             <h2>15. Entire Agreement</h2>
