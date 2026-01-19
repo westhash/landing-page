@@ -1,17 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="t" version="1.2" baseProfile="tiny-ps">
-  <title id="t">WestHash favicon</title>
-  <defs>
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" version="1.2" baseProfile="tiny-ps"><title>WestHash favicon</title><desc>BIMI logo</desc><defs>
     <linearGradient id="g" x1="0" x2="1" y1="1" y2="0">
-      <stop offset="0" stop-color="#2a2c31"/>
-      <stop offset="1" stop-color="#40454f"/>
+      <stop offset="0" stop-color="#2a2c31" />
+      <stop offset="1" stop-color="#40454f" />
     </linearGradient>
     <radialGradient id="v" cx="0.25" cy="0.25" r="1.05">
-      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.06"/>
-      <stop offset="100%" stop-color="#000000" stop-opacity="0.55"/>
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.06" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.55" />
     </radialGradient>
   </defs>
-  <rect width="64" height="64" rx="14" fill="url(#g)"/>
-  <rect width="64" height="64" rx="14" fill="url(#v)" style="mix-blend-mode:overlay" opacity="0.6"/>
-  <text x="30" y="46" font-family="system-ui,Inter,Arial,sans-serif" font-size="35" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="-3">W<tspan fill="#646cff" font-weight="900">#</tspan></text>
-</svg>
+  <path d="m 14,0 h 36 c 7.756,0 14,6.244 14,14 v 36 c 0,7.756 -6.244,14 -14,14 H 14 C 6.244,64 0,57.756 0,50 V 14 C 0,6.244 6.244,0 14,0 Z" fill="url(#g)" /><path d="m 14,0 h 36 c 7.756,0 14,6.244 14,14 v 36 c 0,7.756 -6.244,14 -14,14 H 14 C 6.244,64 0,57.756 0,50 V 14 C 0,6.244 6.244,0 14,0 Z" fill="url(#v)" opacity="0.6" /><g><path d="m 8.8792583,46 h 6.6122157 l 4.325284,-14.21875 h 0.198864 L 24.340906,46 h 6.612216 L 38.460224,20.545455 H 30.754258 L 27.274145,36.255682 H 27.075281 L 22.948861,20.545455 H 16.88352 L 12.757099,36.205966 H 12.558236 L 9.078122,20.545455 H 1.3721561 Z" fill="#ffffff" /><path d="m 47.54119,46 h 4.971591 l 0.957031,-5.816761 h 3.268821 l 0.845171,-4.971591 h -3.306108 l 0.646307,-3.877841 h 3.256392 l 0.84517,-4.971591 h -3.293679 l 0.957031,-5.816761 h -4.97159 l -0.957032,5.816761 h -3.977272 l 0.957031,-5.816761 h -4.971591 l -0.957031,5.816761 h -3.268821 l -0.845171,4.971591 h 3.306108 l -0.646307,3.877841 h -3.256392 l -0.84517,4.971591 h 3.293679 L 38.592327,46 h 4.97159 l 0.957032,-5.816761 h 3.977272 z m -2.212358,-10.788352 0.646307,-3.877841 h 3.977273 l -0.646307,3.877841 z" fill="#646cff" /></g></svg>
