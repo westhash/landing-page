@@ -16,6 +16,31 @@ export default function App() {
   const [headerScrolled, setHeaderScrolled] = useState(false)
   const headerRef = useRef(null)
 
+  // Intersection Observer per animazioni on-scroll
+  useEffect(() => {
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -100px 0px'
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.animationPlayState = 'running'
+          observer.unobserve(entry.target)
+        }
+      })
+    }, observerOptions)
+
+    const animatedElements = document.querySelectorAll('.animate-on-scroll')
+    animatedElements.forEach(el => {
+      el.style.animationPlayState = 'paused'
+      observer.observe(el)
+    })
+
+    return () => observer.disconnect()
+  }, [])
+
   useEffect(() => {
     const updateFontSize = () => {
       const scrollY = window.scrollY
