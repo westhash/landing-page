@@ -53,6 +53,10 @@
   text-decoration: none !important;
 }
 
+.header a::after {
+  display: none !important;
+}
+
 .header .tag {
   font-size: 0.9rem;
   text-transform: uppercase;
@@ -443,6 +447,52 @@
 .product-link:hover {
   color: var(--text);
   transform: translateX(4px);
+}
+
+.product-icon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 1;
+  object-fit: contain;
+  display: block;
+}
+
+/* ZAICO hover color */
+.zaico-product:hover {
+  border-color: #FFA439;
+  box-shadow: 0 10px 28px -8px rgba(255, 164, 57, 0.2);
+}
+
+.zaico-product:hover::after {
+  background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255, 164, 57, 0.08), transparent 50%);
+}
+
+.zaico-product:hover h3 {
+  color: #FFA439;
+}
+
+.zaico-product .product-link {
+  color: #FFA439;
+}
+
+/* Overlander hover color */
+.overlander-product:hover {
+  border-color: #C951A8;
+  box-shadow: 0 10px 28px -8px rgba(201, 81, 168, 0.2);
+}
+
+.overlander-product:hover::after {
+  background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(201, 81, 168, 0.08), transparent 50%);
+}
+
+.overlander-product:hover h3 {
+  color: #C951A8;
+}
+
+.overlander-product .product-link {
+  color: #C951A8;
 }
 
 /* About Section */
