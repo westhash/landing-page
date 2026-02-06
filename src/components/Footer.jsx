@@ -18,8 +18,8 @@ export default function Footer() {
         <div className="footer-section">
           <h4>Products</h4>
           <ul>
-            <li><a href="https://zaico.westhash.io" target="_blank" rel="noopener noreferrer" aria-label="Visit ZAICO product page (opens in a new tab)">ZAICO</a></li>
-            <li><a href="https://overlander.westhash.io" target="_blank" rel="noopener noreferrer" aria-label="Visit Overlander product page (opens in a new tab)">Overlander</a></li>
+            <li><a href="https://zaico.westhash.io" target="_blank" rel="noopener noreferrer">ZAICO</a></li>
+            <li><a href="https://overlander.westhash.io" target="_blank" rel="noopener noreferrer">Overlander</a></li>
           </ul>
         </div>
         <div className="footer-section">
