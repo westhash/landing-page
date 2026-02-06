@@ -4,7 +4,6 @@ import Header from './components/Header'
 import Hero from './components/Hero'
 import Features from './components/Features'
 import Services from './components/Services'
-import Collaborations from './components/Collaborations'
 import Products from './components/Products'
 import About from './components/About'
 import Contact from './components/Contact'
@@ -94,7 +93,6 @@ export default function App() {
       <Hero paddingTop={heroPaddingTop} />
       <Features />
       <Services />
-      <Collaborations />
       <Products />
       <About />
       <Contact />
