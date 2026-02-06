@@ -463,6 +463,23 @@
 .product-item p {
   color: var(--text-dim);
   line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.product-link {
+  display: inline-block;
+  color: var(--brand);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.product-link:hover {
+  color: var(--text);
+  transform: translateX(4px);
 }
 
 /* About Section */

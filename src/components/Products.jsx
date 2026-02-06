@@ -11,6 +11,7 @@ export default function OurProducts() {
           <div className="product-item animate-on-scroll animate-delay-2">
             <h3>ZAICO</h3>
             <p>Automated public certifications on-chain with NFT technology. Web3 access and managing digital certificates with blockchain verification</p>
+            <a href="https://zaico.westhash.io" target="_blank" rel="noopener noreferrer" className="product-link">Visit ZAICO →</a>
           </div>
         </div>
       </div>

@@ -12,7 +12,7 @@ export default function Footer() {
           <ul>
             <li><Link to={isHome ? '#about' : '/#about'}>About Us</Link></li>
             <li><Link to={isHome ? '#services' : '/#services'}>Services</Link></li>
-            <li><Link to={isHome ? '#contact' : '/#contact'}>Contact</Link></li>
+            <li><Link to={isHome ? '#products' : '/#products'}>Products</Link></li>
           </ul>
         </div>
         <div className="footer-section">
