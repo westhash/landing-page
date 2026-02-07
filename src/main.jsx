@@ -1,6 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { HashRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './index.css'
 import App from './App.jsx'
 import Privacy from './pages/Privacy.jsx'
@@ -11,7 +11,7 @@ import ScrollToSection from './components/ScrollToSection.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <HashRouter>
+    <BrowserRouter>
       <ScrollToTop />
       <ScrollToSection />
       <Routes>
@@ -20,6 +20,6 @@ createRoot(document.getElementById('root')).render(
         <Route path="/terms" element={<Terms />} />
         <Route path="/cookies" element={<Cookies />} />
       </Routes>
-    </HashRouter>
+    </BrowserRouter>
   </StrictMode>,
 )
