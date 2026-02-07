@@ -1,6 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { HashRouter, Routes, Route } from 'react-router-dom'
 import './index.css'
 import App from './App.jsx'
 import Privacy from './pages/Privacy.jsx'
@@ -9,13 +9,9 @@ import Cookies from './pages/Cookies.jsx'
 import ScrollToTop from './components/ScrollToTop.jsx'
 import ScrollToSection from './components/ScrollToSection.jsx'
 
-// Automatically detect the base path for subfolder deployment
-// This allows the app to work both at domain root and in subfolders (e.g., IPFS)
-const basename = import.meta.env.BASE_URL
-
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter basename={basename}>
+    <HashRouter>
       <ScrollToTop />
       <ScrollToSection />
       <Routes>
@@ -24,6 +20,6 @@ createRoot(document.getElementById('root')).render(
         <Route path="/terms" element={<Terms />} />
         <Route path="/cookies" element={<Cookies />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   </StrictMode>,
 )
