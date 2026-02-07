@@ -1,7 +1,7 @@
 {
   "name": "WestHash | Enterprise Web3 & Cloud Software Engineering",
   "short_name": "WestHash",
-  "start_url": "/",
+  "start_url": "./",
   "display": "standalone",
   "background_color": "#141414",
   "theme_color": "#646cff",
@@ -9,7 +9,7 @@
   "description": "Enterprise-grade Web3, cloud, serverless & full‑stack software engineering solutions.",
   "icons": [
     {
-      "src": "/favicon.svg",
+      "src": "./favicon.svg",
       "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "any"

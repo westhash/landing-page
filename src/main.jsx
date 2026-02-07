@@ -9,9 +9,18 @@ import Cookies from './pages/Cookies.jsx'
 import ScrollToTop from './components/ScrollToTop.jsx'
 import ScrollToSection from './components/ScrollToSection.jsx'
 
+// Calcola il basename dal tag <base> per supportare subdirectory
+const getBasename = () => {
+  const base = document.querySelector('base')?.href
+  if (!base) return '/'
+  
+  const url = new URL(base, window.location.origin)
+  return url.pathname
+}
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename={getBasename()}>
       <ScrollToTop />
       <ScrollToSection />
       <Routes>
