@@ -9,9 +9,13 @@ import Cookies from './pages/Cookies.jsx'
 import ScrollToTop from './components/ScrollToTop.jsx'
 import ScrollToSection from './components/ScrollToSection.jsx'
 
+// Automatically detect the base path for subfolder deployment
+// This allows the app to work both at domain root and in subfolders (e.g., IPFS)
+const basename = import.meta.env.BASE_URL
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename={basename}>
       <ScrollToTop />
       <ScrollToSection />
       <Routes>
