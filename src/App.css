@@ -53,6 +53,10 @@
   text-decoration: none !important;
 }
 
+.header a::after {
+  display: none !important;
+}
+
 .header .tag {
   font-size: 0.9rem;
   text-transform: uppercase;
@@ -365,7 +369,187 @@
   z-index: 1;
 }
 
+/* Collaborations Section */
+.collaborations-lead {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin: 0 auto 2rem;
+  max-width: 600px;
+  text-align: center;
+}
+
+.collaborations-list {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.collaboration-item {
+  flex: 1 1 auto;
+  min-width: 180px;
+  max-width: 240px;
+}
+
+.collaboration-type {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-dim);
+  line-height: 1.4;
+  text-align: center;
+  display: block;
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .collaborations-list {
+    gap: 1rem;
+  }
+  
+  .collaboration-item {
+    min-width: 150px;
+  }
+  
+  .collaboration-type {
+    font-size: 0.9rem;
+  }
+}
+
+/* Our Products Section */
+.products-section {
+  background: var(--hero-bg);
+}
+
+.products-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.product-item {
+  padding: 2rem;
+  background: var(--surface);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.product-item::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(100, 108, 255, 0.08), transparent 50%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.product-item:hover {
+  border-color: var(--brand);
+  box-shadow: 0 10px 28px -8px rgba(100, 108, 255, 0.2);
+  transform: translateY(-4px);
+}
+
+.product-item:hover::after {
+  opacity: 1;
+}
+
+.product-item h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: var(--text);
+  transition: color 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.product-item:hover h3 {
+  color: var(--brand);
+}
+
+.product-item p {
+  color: var(--text-dim);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.product-link {
+  display: inline-block;
+  color: var(--brand);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.product-link:hover {
+  color: var(--text);
+  transform: translateX(4px);
+}
+
+.product-icon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 1;
+  object-fit: contain;
+  display: block;
+}
+
+/* ZAICO hover color */
+.zaico-product:hover {
+  border-color: #FFA439;
+  box-shadow: 0 10px 28px -8px rgba(255, 164, 57, 0.2);
+}
+
+.zaico-product:hover::after {
+  background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255, 164, 57, 0.08), transparent 50%);
+}
+
+.zaico-product:hover h3 {
+  color: #FFA439;
+}
+
+.zaico-product .product-link {
+  color: #FFA439;
+}
+
+/* Overlander hover color */
+.overlander-product:hover {
+  border-color: #C951A8;
+  box-shadow: 0 10px 28px -8px rgba(201, 81, 168, 0.2);
+}
+
+.overlander-product:hover::after {
+  background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(201, 81, 168, 0.08), transparent 50%);
+}
+
+.overlander-product:hover h3 {
+  color: #C951A8;
+}
+
+.overlander-product .product-link {
+  color: #C951A8;
+}
+
 /* About Section */
+.about-section {
+}
+
 .about-content {
   max-width: 800px;
   margin: 0 auto;
