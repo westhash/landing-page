@@ -11,31 +11,31 @@ export default function Features() {
         <div className="features-grid">
           <div className="feature-card animate-on-scroll animate-delay-1">
             <div className="feature-icon">
-              <img src={performanceIcon} alt="Performance" />
-            </div>
-            <h3>Performance</h3>
-            <p>Optimized architectures for fast applications with cost optimization</p>
-          </div>
-          <div className="feature-card animate-on-scroll animate-delay-2">
-            <div className="feature-icon">
               <img src={securityIcon} alt="Security" />
             </div>
             <h3>Security</h3>
             <p>Enterprise-grade protocols and compliance with industry standards</p>
           </div>
-          <div className="feature-card animate-on-scroll animate-delay-3">
-            <div className="feature-icon">
-              <img src={scalabilityIcon} alt="Scalability" />
-            </div>
-            <h3>Scalability</h3>
-            <p>Cloud-native solutions that grow with your business needs</p>
-          </div>
-          <div className="feature-card animate-on-scroll animate-delay-4">
+          <div className="feature-card animate-on-scroll animate-delay-2">
             <div className="feature-icon">
               <img src={reliabilityIcon} alt="Reliability" />
             </div>
             <h3>Reliability</h3>
             <p>High-availability infrastructure with maximum uptime</p>
+          </div>
+          <div className="feature-card animate-on-scroll animate-delay-3">
+            <div className="feature-icon">
+              <img src={performanceIcon} alt="Performance" />
+            </div>
+            <h3>Performance</h3>
+            <p>Optimized architectures for fast applications with cost optimization</p>
+          </div>
+          <div className="feature-card animate-on-scroll animate-delay-4">
+            <div className="feature-icon">
+              <img src={scalabilityIcon} alt="Scalability" />
+            </div>
+            <h3>Scalability</h3>
+            <p>Cloud-native solutions that grow with your business needs</p>
           </div>
         </div>
       </div>
