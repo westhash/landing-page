@@ -16,7 +16,7 @@ export default function OurProducts() {
           <div className="product-item overlander-product animate-on-scroll animate-delay-2" ref={addMouseRef}>
             <h3>Overlander</h3>
             <p>Booking platform for van rest areas with geolocation technology. Users can list or access parking spots with fully automated check-in and management</p>
-            <a href="https://overlander.westhash.io/#whitepaper" target="_blank" rel="noopener noreferrer" className="product-link">Whitepaper →</a>
+            <a href="https://overlander.westhash.io" target="_blank" rel="noopener noreferrer" className="product-link">More →</a>
           </div>
         </div>
       </div>
