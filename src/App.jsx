@@ -133,8 +133,10 @@ export default function App() {
       // collapse/expand fires resize during scroll, which used to cause a jump.
       if (window.scrollY === 0) updatePadding()
     }
-    // Measure on the next frame so JS-driven inline padding has been applied.
-    requestAnimationFrame(updatePadding)
+    // Measure synchronously before paint — the brand is sized from CSS at
+    // this point, so the value is correct on first frame and there's no
+    // visible jump from padding 0 to the measured value.
+    updatePadding()
     window.addEventListener('resize', onResize)
     window.addEventListener('orientationchange', onResize)
     return () => {

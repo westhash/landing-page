@@ -16,7 +16,7 @@ export default function Header({ headerRef }) {
       }}
     >
       <div className="brand-block">
-        <div className="brand" style={{ fontSize: '8rem' }}>
+        <div className="brand">
           <b>West<span><b>#</b></span></b>
         </div>
         <p className="tag tag-hidden">web technologies</p>
