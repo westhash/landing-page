@@ -19,7 +19,6 @@ export default function Collaborations() {
         <div className="collaborations-list">
           {collaborations.map((c, i) => (
             <div key={i} className="collaboration-item reveal" data-rd={i * 60}>
-              <span className="marker"></span>
               <span className="collaboration-type">{c}</span>
             </div>
           ))}
