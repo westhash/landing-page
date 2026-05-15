@@ -84,10 +84,10 @@ export default function App() {
       const padXRem = 2 - progress * 0.25          // 2rem    → 1.75rem
       header.style.padding = `${padTopRem}rem ${padXRem}rem ${padBottomRem}rem`
 
-      // Topbar color: dark solid → nearly transparent
-      const c = Math.round(29 - progress * 9)      // 29 → 20
+      // Topbar color: solid → nearly transparent. Channel comes from a CSS
+      // variable so it follows the active light/dark theme.
       const a = 0.9 - progress * 0.8               // 0.9 → 0.1
-      header.style.background = `rgba(${c}, ${c}, ${c}, ${a.toFixed(3)})`
+      header.style.background = `rgba(var(--header-bg-rgb), ${a.toFixed(3)})`
 
       // Backdrop blur: 10px → 1px
       const blur = Math.max(1, 10 - progress * 9)

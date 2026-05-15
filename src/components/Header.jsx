@@ -10,7 +10,7 @@ export default function Header({ headerRef }) {
       className="header"
       ref={headerRef}
       style={{
-        background: 'rgba(29, 29, 29, 0.9)',
+        background: 'rgba(var(--header-bg-rgb), 0.9)',
         backdropFilter: 'blur(10px)',
         WebkitBackdropFilter: 'blur(10px)',
       }}

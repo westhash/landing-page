@@ -49,7 +49,16 @@
 .tag-hidden { opacity: 0; transform: translateY(-6px); height: 0; margin: 0; overflow: hidden; }
 .tag-visible { opacity: 1; transform: translateY(0); height: auto; margin-top: 0.15rem; }
 
-/* (legacy .header-scrolled class removed — transitions now continuous via JS) */
+/* Static "scrolled" state for non-home pages — matches the end state of the
+   scroll-driven animation in App.jsx (progress = 1). */
+.header.header-scrolled {
+  align-items: flex-start;
+  padding: 0.65rem 1.75rem;
+  background: rgba(var(--header-bg-rgb), 0.1);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+}
+.header.header-scrolled .brand { font-size: 1.4rem; }
 
 /* ---------- Hero ---------- */
 .hero-section {
@@ -163,7 +172,7 @@
 }
 .btn-secondary:hover {
   border-color: rgba(var(--brand-rgb), 0.6);
-  color: #fff;
+  color: var(--text-strong);
   background: rgba(var(--brand-rgb), 0.06);
 }
 
@@ -222,7 +231,7 @@
 }
 .feature-card:hover {
   border-color: var(--border-strong);
-  background: rgba(29, 29, 29, 0.85);
+  background: var(--surface-hover);
   transform: translateY(-2px);
 }
 .feature-icon {
@@ -347,7 +356,7 @@
   padding: 1.25rem 1rem;
   border: 1px solid var(--border);
   border-radius: 10px;
-  background: rgba(29, 29, 29, 0.45);
+  background: var(--tile-bg);
   transition:
     border-color var(--dur) var(--ease),
     background var(--dur) var(--ease),
@@ -465,7 +474,7 @@
   transition: gap var(--dur) var(--ease), color var(--dur) var(--ease);
 }
 .product-link:hover .arrow { transform: translateX(4px); }
-.product-link:hover { color: #fff; }
+.product-link:hover { color: var(--text-strong); }
 
 /* Product accent overrides — kept identical to original */
 .zaico-product { --accent: #FFA439; --accent-rgb: 255, 164, 57; }
@@ -536,7 +545,7 @@
   padding: 0.45rem 1rem;
   border: 1px solid var(--border);
   border-radius: 999px;
-  background: rgba(29, 29, 29, 0.4);
+  background: var(--tile-bg);
 }
 .social-links a {
   font-size: 0.88rem;
@@ -545,7 +554,7 @@
   padding: 0.25rem 0.3rem;
   transition: color var(--dur) var(--ease);
 }
-.social-links a:hover { color: #fff; }
+.social-links a:hover { color: var(--text-strong); }
 .social-links a + a::before {
   content: "";
   position: absolute;
@@ -562,7 +571,7 @@
 /* ---------- Footer ---------- */
 .footer {
   padding: 3rem 2rem 1.5rem;
-  background: rgba(20, 20, 20, 0.55);
+  background: var(--footer-bg);
   border-top: 1px solid var(--border);
 }
 .footer-content {
@@ -608,7 +617,7 @@
   font-size: 0.92rem;
   transition: color var(--dur) var(--ease);
 }
-.footer-section ul li a:hover { color: #fff; }
+.footer-section ul li a:hover { color: var(--text-strong); }
 .footer-bottom {
   max-width: 1180px;
   margin: 0 auto;

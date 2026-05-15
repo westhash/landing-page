@@ -6,15 +6,17 @@ export default function Privacy() {
   return (
     <div className="app-container">
       <header className="header header-scrolled">
-        <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
-          <div className="brand" style={{ fontSize: '1.3rem' }}>
-            <b>West<span><b>#</b></span></b>
-          </div>
-        </Link>
-        <p className="tag tag-visible">web technologies</p>
+        <div className="brand-block">
+          <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
+            <div className="brand">
+              <b>West<span><b>#</b></span></b>
+            </div>
+          </Link>
+          <p className="tag tag-visible">web technologies</p>
+        </div>
       </header>
 
-      <section className="section legal-page" style={{ paddingTop: '150px' }}>
+      <section className="section legal-page">
         <div className="container">
           <h1 className="section-title">Privacy Policy</h1>
           <div className="legal-content">
