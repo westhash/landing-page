@@ -93,6 +93,20 @@
   margin: 0 auto;
   line-height: 1.55;
 }
+.hero-subtitle {
+  /* Reserve a line so the typewriter doesn't shift the CTA below it. */
+  min-height: 1.55em;
+}
+.cursor-blink {
+  display: inline-block;
+  margin-left: 1px;
+  color: var(--brand);
+  animation: cursor-blink 1s step-end infinite;
+}
+@keyframes cursor-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
 .hero-cta {
   display: flex;
   gap: 0.875rem;
