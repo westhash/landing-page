@@ -7,6 +7,10 @@ export default function Footer() {
   return (
     <footer className="footer">
       <div className="footer-content">
+        <div className="footer-section footer-brand">
+          <div className="b">West<span>#</span></div>
+          <p>web technologies</p>
+        </div>
         <div className="footer-section">
           <h4>Company</h4>
           <ul>

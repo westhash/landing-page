@@ -51,9 +51,8 @@ src/
     Footer.jsx         # Footer with nav links
     ScrollToTop.jsx    # Scrolls to top on route change
     ScrollToSection.jsx# Scrolls to hash anchor after navigation
-    CTA.jsx            # (Unused placeholder)
-    Experience.jsx     # (Unused placeholder)
-    Testimonials.jsx   # (Unused placeholder)
+    RevealWords.jsx    # Splits text into word spans for staggered reveal animation
+    SectionHead.jsx    # Centered section title with animated underline rule
   assets/features/     # SVG icons (performance, reliability, scalability, security)
   hooks/
     useMousePosition.js # Mouse tracking hook for interactive effects
@@ -105,7 +104,6 @@ The basename is dynamically computed in `main.jsx` to support subdirectory deplo
 - All components are **functional with hooks** — no class components.
 - **No Context API or state management library** — layout state lives in `App.jsx` and is prop-drilled.
 - Dynamic inline styles (e.g. `fontSize`, `backdropFilter`) are passed as props to `Header.jsx`.
-- **Unused components** (`CTA.jsx`, `Experience.jsx`, `Testimonials.jsx`) are scaffolds — do not delete them.
 
 ### Assets
 
@@ -157,5 +155,4 @@ There is no test framework configured. If adding tests, use **Vitest** (already 
 - Do not switch to `HashRouter` — the project uses `BrowserRouter` with dynamic basename.
 - Do not add absolute asset paths (`/image.png`) — use relative paths or Vite imports.
 - Do not introduce a CSS preprocessor or CSS-in-JS library without discussion.
-- Do not remove placeholder components (`CTA.jsx`, `Experience.jsx`, `Testimonials.jsx`).
 - Do not add a state management library (Redux, Zustand, etc.) for this simple site.

@@ -1,9 +1,4 @@
 <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- Lightning bolt - performance symbol -->
-  <path d="M27 2L11 24H21L17 46L37 24H27L27 2Z" 
-        fill="#646cff" 
-        stroke="#646cff" 
-        stroke-width="1.5" 
-        stroke-linejoin="round"
-        stroke-linecap="round"/>
+  
+  <path d="M27 2L11 24H21L17 46L37 24H27L27 2Z" fill="#646cff" stroke="#646cff" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"></path>
 </svg>

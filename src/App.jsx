@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, useLayoutEffect } from 'react'
+import { useEffect, useRef, useLayoutEffect, useState } from 'react'
 import './App.css'
 import Header from './components/Header'
 import Hero from './components/Hero'
@@ -11,86 +11,135 @@ import Contact from './components/Contact'
 import Footer from './components/Footer'
 
 export default function App() {
-  const [brandFontSize, setBrandFontSize] = useState('8rem')
   const [heroPaddingTop, setHeroPaddingTop] = useState(0)
-  const [headerBlur, setHeaderBlur] = useState('10px')
-  const [tagVisible, setTagVisible] = useState(false)
-  const [headerScrolled, setHeaderScrolled] = useState(false)
   const headerRef = useRef(null)
 
-  // Intersection Observer per animazioni on-scroll
+  // ---------- Reveal-on-scroll ----------
   useEffect(() => {
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -100px 0px'
-    }
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const rd = entry.target.dataset.rd
+            if (rd) entry.target.style.setProperty('--rd', `${rd}ms`)
+            entry.target.classList.add('reveal-on')
+            io.unobserve(entry.target)
+          }
+        })
+      },
+      { threshold: 0.12, rootMargin: '0px 0px -60px 0px' }
+    )
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.style.animationPlayState = 'running'
-          observer.unobserve(entry.target)
-        }
-      })
-    }, observerOptions)
+    document.querySelectorAll('.reveal').forEach((el) => io.observe(el))
 
-    const animatedElements = document.querySelectorAll('.animate-on-scroll')
-    animatedElements.forEach(el => {
-      el.style.animationPlayState = 'paused'
-      observer.observe(el)
+    // Trigger the hero immediately so it animates in on first paint.
+    requestAnimationFrame(() => {
+      document.querySelectorAll('.hero-section .reveal').forEach((el) =>
+        el.classList.add('reveal-on')
+      )
     })
 
-    return () => observer.disconnect()
+    return () => io.disconnect()
   }, [])
 
+  // ---------- Mouse-tracked glow on service / product cards ----------
   useEffect(() => {
-    const updateFontSize = () => {
+    const els = document.querySelectorAll('.mouse-track')
+    const onMove = (e) => {
+      const el = e.currentTarget
+      const r = el.getBoundingClientRect()
+      el.style.setProperty('--mx', `${e.clientX - r.left}px`)
+      el.style.setProperty('--my', `${e.clientY - r.top}px`)
+    }
+    els.forEach((el) => el.addEventListener('mousemove', onMove))
+    return () => els.forEach((el) => el.removeEventListener('mousemove', onMove))
+  }, [])
+
+  // ---------- Scroll-driven header animation ----------
+  // Everything (font-size, padding, color, blur, logo position) is interpolated
+  // 1:1 with scrollY via direct DOM writes — no CSS transitions on the moving
+  // properties, so it stays perfectly responsive to the scroll position.
+  useEffect(() => {
+    const header = headerRef.current
+    if (!header) return
+    const brand = header.querySelector('.brand')
+    const brandBlock = header.querySelector('.brand-block')
+    const tag = header.querySelector('.tag')
+    if (!brand || !brandBlock || !tag) return
+
+    const update = () => {
       const scrollY = window.scrollY
       const maxScroll = 220
+      const progress = Math.min(1, scrollY / maxScroll)
+
+      // Brand font-size — super reactive 1:1
       const startSize = Math.min(8, window.innerWidth / 90)
-      const endSize = 1.3
-      const size = Math.max(startSize - (scrollY / maxScroll) * (startSize - endSize), endSize)
-      setBrandFontSize(`${size}rem`)
+      const endSize = 1.4
+      const size = startSize - progress * (startSize - endSize)
+      brand.style.fontSize = `${size}rem`
 
-      const blurValue = Math.max(1, 10 - (scrollY / maxScroll) * 9)
-      setHeaderBlur(`${blurValue}px`)
+      // Topbar shape: padding interpolates between centered & scrolled states
+      const padTopRem = 1.25 - progress * 0.6      // 1.25rem → 0.65rem
+      const padBottomRem = 1 - progress * 0.35     // 1rem    → 0.65rem
+      const padXRem = 2 - progress * 0.25          // 2rem    → 1.75rem
+      header.style.padding = `${padTopRem}rem ${padXRem}rem ${padBottomRem}rem`
 
-      setTagVisible(scrollY > 300)
-      setHeaderScrolled(scrollY > maxScroll)
+      // Topbar color: dark solid → nearly transparent
+      const c = Math.round(29 - progress * 9)      // 29 → 20
+      const a = 0.9 - progress * 0.8               // 0.9 → 0.1
+      header.style.background = `rgba(${c}, ${c}, ${c}, ${a.toFixed(3)})`
+
+      // Backdrop blur: 10px → 1px
+      const blur = Math.max(1, 10 - progress * 9)
+      header.style.backdropFilter = `blur(${blur}px)`
+      header.style.webkitBackdropFilter = `blur(${blur}px)`
+
+      // Logo position: smoothly slides from center to top-left.
+      // CSS keeps brand-block centered via align-items; we translate it leftward
+      // by the exact amount needed to land at the inner-left edge.
+      const padXPx = padXRem * 16
+      const innerWidth = header.clientWidth - padXPx * 2
+      const blockWidth = brandBlock.offsetWidth
+      const centerOffset = Math.max(0, (innerWidth - blockWidth) / 2)
+      const tx = -centerOffset * progress
+      brandBlock.style.transform = `translateX(${tx}px)`
+
+      // Tagline visibility — class-based opacity transition
+      const showTag = scrollY > 300
+      tag.classList.toggle('tag-visible', showTag)
+      tag.classList.toggle('tag-hidden', !showTag)
     }
-    updateFontSize() // Initialize on mount
-    window.addEventListener('scroll', updateFontSize)
-    window.addEventListener('resize', updateFontSize)
+
+    update()
+    window.addEventListener('scroll', update, { passive: true })
+    window.addEventListener('resize', update)
     return () => {
-      window.removeEventListener('scroll', updateFontSize)
-      window.removeEventListener('resize', updateFontSize)
+      window.removeEventListener('scroll', update)
+      window.removeEventListener('resize', update)
     }
   }, [])
 
+  // ---------- Hero padding (measured once after the header has its initial size) ----------
   useLayoutEffect(() => {
     const updatePadding = () => {
       if (headerRef.current) {
-        const height = headerRef.current.offsetHeight
-        const isLandscape = window.innerWidth > window.innerHeight
-        setHeroPaddingTop(height + (isLandscape ? 20 : -30)) 
+        // header height + 4rem of breathing room — matches padding-bottom for symmetry
+        setHeroPaddingTop(headerRef.current.offsetHeight + 64)
       }
     }
-    updatePadding()
+    // Measure on the next frame so JS-driven inline padding has been applied.
+    requestAnimationFrame(updatePadding)
+    window.addEventListener('resize', updatePadding)
     window.addEventListener('orientationchange', updatePadding)
     return () => {
+      window.removeEventListener('resize', updatePadding)
       window.removeEventListener('orientationchange', updatePadding)
     }
   }, [])
 
   return (
     <div className="app-container">
-      <Header 
-        headerRef={headerRef}
-        brandFontSize={brandFontSize}
-        headerBlur={headerBlur}
-        headerScrolled={headerScrolled}
-        tagVisible={tagVisible}
-      />
+      <Header headerRef={headerRef} />
       <Hero paddingTop={heroPaddingTop} />
       <Features />
       <Services />
