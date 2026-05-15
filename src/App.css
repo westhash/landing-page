@@ -23,8 +23,10 @@
   will-change: transform;
 }
 .header .brand {
-  /* JS-driven, no transition — tracks scroll 1:1 */
-  font-size: 8rem;
+  /* Mirrors the JS startSize formula min(8rem, viewport/90) so the brand
+     has its correct size from first paint — JS overrides this inline once
+     the scroll handler runs. */
+  font-size: min(8rem, 17.78vw);
   font-weight: 600;
   letter-spacing: -1px;
 }
