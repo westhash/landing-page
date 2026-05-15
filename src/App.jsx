@@ -127,13 +127,19 @@ export default function App() {
         setHeroPaddingTop(headerRef.current.offsetHeight + 64)
       }
     }
+    const onResize = () => {
+      // Only re-measure when at the top: mid-scroll the header is shrunken,
+      // and re-measuring would shift the hero content. On mobile, address-bar
+      // collapse/expand fires resize during scroll, which used to cause a jump.
+      if (window.scrollY === 0) updatePadding()
+    }
     // Measure on the next frame so JS-driven inline padding has been applied.
     requestAnimationFrame(updatePadding)
-    window.addEventListener('resize', updatePadding)
-    window.addEventListener('orientationchange', updatePadding)
+    window.addEventListener('resize', onResize)
+    window.addEventListener('orientationchange', onResize)
     return () => {
-      window.removeEventListener('resize', updatePadding)
-      window.removeEventListener('orientationchange', updatePadding)
+      window.removeEventListener('resize', onResize)
+      window.removeEventListener('orientationchange', onResize)
     }
   }, [])
 
