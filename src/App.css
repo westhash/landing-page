@@ -355,21 +355,20 @@
   text-align: center;
 }
 .collaborations-list {
+  /* Olympic-rings layout: 3 tiles top row, 2 wrap to a centered second row. */
   display: flex;
-  gap: 0.875rem;
-  justify-content: center;
-  align-items: stretch;
   flex-wrap: wrap;
-  max-width: 980px;
+  justify-content: center;
+  gap: 1.25rem;
+  max-width: 920px;
   margin: 0 auto;
 }
 .collaboration-item {
-  flex: 1 1 auto;
-  min-width: 200px;
-  max-width: 260px;
-  padding: 1.25rem 1rem;
+  flex: 0 1 240px;
+  padding: 1.4rem 1.25rem;
+  min-height: 92px;
   border: 1px solid var(--border);
-  border-radius: 10px;
+  border-radius: 12px;
   background: var(--tile-bg);
   transition:
     border-color var(--dur) var(--ease),
@@ -379,7 +378,6 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  gap: 0.6rem;
 }
 .collaboration-item:hover {
   border-color: rgba(var(--brand-rgb), 0.35);
@@ -387,10 +385,10 @@
   transform: translateY(-1px);
 }
 .collaboration-type {
-  font-size: 0.92rem;
+  font-size: 0.98rem;
   font-weight: 500;
   color: var(--text);
-  line-height: 1.35;
+  line-height: 1.4;
 }
 
 /* ---------- Products ---------- */

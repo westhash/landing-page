@@ -18,7 +18,7 @@ export default function Hero({ paddingTop }) {
           setDone(true)
         }
       }, 40)
-    }, 800)
+    }, 0)
     return () => {
       clearTimeout(start)
       clearInterval(interval)
