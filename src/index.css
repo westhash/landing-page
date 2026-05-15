@@ -18,7 +18,7 @@
   --border: rgba(255, 255, 255, 0.08);
   --border-strong: rgba(255, 255, 255, 0.14);
   /* Theme-aware tokens used by header/footer/tiles so light mode renders correctly. */
-  --header-bg-rgb: 20, 20, 20;
+  --header-bg-rgb: 29, 29, 29;
   --tile-bg: rgba(29, 29, 29, 0.45);
   --surface-hover: rgba(29, 29, 29, 0.55);
   --footer-bg: rgba(20, 20, 20, 0.55);
