@@ -59,6 +59,9 @@ export default function App() {
   // Everything (font-size, padding, color, blur, logo position) is interpolated
   // 1:1 with scrollY via direct DOM writes — no CSS transitions on the moving
   // properties, so it stays perfectly responsive to the scroll position.
+  // Updates are coalesced through requestAnimationFrame so we paint at most
+  // once per frame; layout-dependent measurements (block & header widths) are
+  // sampled only on resize to avoid forced reflows during scroll.
   useEffect(() => {
     const header = headerRef.current
     if (!header) return
@@ -67,55 +70,87 @@ export default function App() {
     const tag = header.querySelector('.tag')
     if (!brand || !brandBlock || !tag) return
 
-    const update = () => {
-      const scrollY = window.scrollY
-      const maxScroll = 220
-      const progress = Math.min(1, scrollY / maxScroll)
+    const MAX_SCROLL = 220
+    const END_SIZE = 1.4
 
-      // Brand font-size — super reactive 1:1
-      const startSize = Math.min(8, window.innerWidth / 90)
-      const endSize = 1.4
-      const size = startSize - progress * (startSize - endSize)
-      brand.style.fontSize = `${size}rem`
+    let startSize = Math.min(8, window.innerWidth / 90)
+    let baseBlockWidth = 0
+    let headerWidth = header.clientWidth
+    let rafId = 0
+    let tagShown = false
 
-      // Topbar shape: padding interpolates between centered & scrolled states
-      const padTopRem = 1.25 - progress * 0.6      // 1.25rem → 0.65rem
-      const padBottomRem = 1 - progress * 0.35     // 1rem    → 0.65rem
-      const padXRem = 2 - progress * 0.25          // 2rem    → 1.75rem
-      header.style.padding = `${padTopRem}rem ${padXRem}rem ${padBottomRem}rem`
-
-      // Topbar color: solid → nearly transparent. Channel comes from a CSS
-      // variable so it follows the active light/dark theme.
-      const a = 0.9 - progress * 0.8               // 0.9 → 0.1
-      header.style.background = `rgba(var(--header-bg-rgb), ${a.toFixed(3)})`
-
-      // Backdrop blur: 10px → 1px
-      const blur = Math.max(1, 10 - progress * 9)
-      header.style.backdropFilter = `blur(${blur}px)`
-      header.style.webkitBackdropFilter = `blur(${blur}px)`
-
-      // Logo position: smoothly slides from center to top-left.
-      // CSS keeps brand-block centered via align-items; we translate it leftward
-      // by the exact amount needed to land at the inner-left edge.
-      const padXPx = padXRem * 16
-      const innerWidth = header.clientWidth - padXPx * 2
-      const blockWidth = brandBlock.offsetWidth
-      const centerOffset = Math.max(0, (innerWidth - blockWidth) / 2)
-      const tx = -centerOffset * progress
-      brandBlock.style.transform = `translateX(${tx}px)`
-
-      // Tagline visibility — class-based opacity transition
-      const showTag = scrollY > 300
-      tag.classList.toggle('tag-visible', showTag)
-      tag.classList.toggle('tag-hidden', !showTag)
+    const measure = () => {
+      startSize = Math.min(8, window.innerWidth / 90)
+      // Snapshot block width at the start (unscrolled) size so we can derive
+      // its current width during scroll by ratio — no layout reads per frame.
+      const prevTransform = brandBlock.style.transform
+      const prevFont = brand.style.fontSize
+      brandBlock.style.transform = ''
+      brand.style.fontSize = `${startSize}rem`
+      // Single forced layout here is acceptable — happens on resize, not scroll.
+      baseBlockWidth = brandBlock.offsetWidth
+      headerWidth = header.clientWidth
+      brand.style.fontSize = prevFont
+      brandBlock.style.transform = prevTransform
     }
 
-    update()
-    window.addEventListener('scroll', update, { passive: true })
-    window.addEventListener('resize', update)
+    const apply = () => {
+      rafId = 0
+      const scrollY = window.scrollY
+      const progress = scrollY >= MAX_SCROLL ? 1 : scrollY <= 0 ? 0 : scrollY / MAX_SCROLL
+
+      const size = startSize - progress * (startSize - END_SIZE)
+      brand.style.fontSize = `${size}rem`
+
+      const padTopRem = 1.25 - progress * 0.6
+      const padBottomRem = 1 - progress * 0.35
+      const padXRem = 2 - progress * 0.25
+      header.style.padding = `${padTopRem}rem ${padXRem}rem ${padBottomRem}rem`
+
+      const a = 0.9 - progress * 0.8
+      header.style.background = `rgba(var(--header-bg-rgb), ${a.toFixed(3)})`
+
+      const blur = Math.max(1, 10 - progress * 9)
+      const blurStr = `blur(${blur}px)`
+      header.style.backdropFilter = blurStr
+      header.style.webkitBackdropFilter = blurStr
+
+      // Approximate current block width by scaling the cached base — text width
+      // scales linearly with font-size, so this matches reality closely and
+      // avoids reading offsetWidth (which would trigger reflow each frame).
+      const scaleRatio = size / startSize
+      const currentBlockWidth = baseBlockWidth * scaleRatio
+      const padXPx = padXRem * 16
+      const innerWidth = headerWidth - padXPx * 2
+      const centerOffset = Math.max(0, (innerWidth - currentBlockWidth) / 2)
+      const tx = -centerOffset * progress
+      brandBlock.style.transform = `translate3d(${tx}px, 0, 0)`
+
+      const showTag = scrollY > 300
+      if (showTag !== tagShown) {
+        tag.classList.toggle('tag-visible', showTag)
+        tag.classList.toggle('tag-hidden', !showTag)
+        tagShown = showTag
+      }
+    }
+
+    const schedule = () => {
+      if (!rafId) rafId = requestAnimationFrame(apply)
+    }
+
+    const onResize = () => {
+      measure()
+      schedule()
+    }
+
+    measure()
+    apply()
+    window.addEventListener('scroll', schedule, { passive: true })
+    window.addEventListener('resize', onResize)
     return () => {
-      window.removeEventListener('scroll', update)
-      window.removeEventListener('resize', update)
+      if (rafId) cancelAnimationFrame(rafId)
+      window.removeEventListener('scroll', schedule)
+      window.removeEventListener('resize', onResize)
     }
   }, [])
 
